@@ -1,5 +1,11 @@
 const content = {
     en: {
+        about: "About",
+        thesis: "Thesis",
+        event: "Event",
+        experience: "Experience",
+        projects: "Projects",
+        contact: "Contact",
         name: "Pranav B.E., M.Sc.",
         role: "Robotics Programming Developer",
         company: "Q.Vitec GmbH",
@@ -7,34 +13,34 @@ const content = {
         linkedin: "My LinkedIn profile",
         github: "My Github profile",
         learnMore: "Get To Know More",
-        about: "About Me",
+        aboutText: "Experienced project developer with a focus on microcontrollers and single-board computers...",
         education: "Education",
         beDegree: "B.E. Bachelors Degree (Electronics & Communication Engineering) at Anna University, India",
         mscDegree: "M.Sc. Masters Degree (Optical Technologies) at Leibniz University Hannover, Germany",
-        aboutText: "Experienced project developer with a focus on microcontrollers and single-board computers. Proficient in Arduino, ESP32, ESP8266, STM32, Raspberry Pi, and Nvidia Jetson. Skilled in MatLab, Embedded C, and Python. Strong background in program debugging, computer hardware maintenance, circuit designing (Basic), and web designing (front-end). Committed to independence, I embrace challenges, self-discipline, and the autonomy to create meaningful outcomes.",
-        thesisTitle: "Master's Thesis at Leibniz University Hannover",
-        thesisObjective: "Objective: Develop a generative AI framework to create modified dermoscopic image pairs, illustrating malignancy and benign lesions, to educate patients and dermatologists with user interface.",
-        bachelorThesis: "Bachelor's Thesis at Anna University, Chennai, India",
-        bachelorThesisObjective: "Objective: Create a novel secure wireless communication system that combines cutting-edge encoding during transmission and effective decoding during reception to improve data transfer over limited bandwidths while maintaining the highest levels of signal security and privacy.",
+        thesisTitle1: "Master's Thesis at Leibniz University Hannover",
+        thesisDesc1: "Advancing Melanoma Skin Cancer Diagnostics and Education: Integrating Deep Learning...",
+        thesisObjective1: "Objective: Develop a generative AI framework to create modified dermoscopic image pairs...",
+        thesisTools1: "Tools: Python, Pytorch, Deep Learning",
+        thesisTitle2: "Bachelor's Thesis at Anna University, Chennai, India",
+        thesisDesc2: "A Novel Approach for Signal Security and Video Transmission using Lower Bandwidth Technique.",
+        thesisObjective2: "Objective: Create a novel secure wireless communication system...",
+        thesisTools2: "Tools: Matlab",
         ongoingEvents: "Ongoing Events",
-        ongoingEventRole: "Robotics Programming Developer, Q.Vitec GmbH, Wunstorf, Germany",
-        ongoingEventDescription: "Design, develop, and deploy software solutions for robotic systems. Collaborate to integrate software with robotic hardware components. Create algorithms for robotic perception, navigation, manipulation, and control.",
-        projects: "Long Term Projects",
-        project1: "S.L.A.M",
-        project2: "Face-Tracker",
-        project3: "Pi Cluster",
-        experience: "Experience",
-        workExperience: "Working Experience",
-        volunteerExperience: "Project Developer (Volunteer)",
-        researchAssistant: "Research Assistant",
-        studentAssistant: "Student Assistant",
-        internshipExperience: "Internship Experience",
-        softwareEngineerIntern: "Software Engineer Intern",
-        researchInternship: "Research Internship",
+        ongoingRole: "Robotics Programming Developer, Q.Vitec GmbH, Wunstorf, Germany",
+        ongoingDesc: "Design, develop, and deploy software solutions for robotic systems...",
+        ongoingTools: "Tools: Python",
+        experienceTitle: "Experience",
+        projectsTitle: "Long Term Projects",
         contactMe: "Contact Me",
-        email: "Email icon",
+        email: "Email",
     },
     de: {
+        about: "Über",
+        thesis: "Abschluss",
+        event: "Veranstaltung",
+        experience: "Erfahrung",
+        projects: "Projekte",
+        contact: "Kontakt",
         name: "Pranav B.E., M.Sc.",
         role: "Robotics-Programmierentwickler",
         company: "Q.Vitec GmbH",
@@ -42,75 +48,60 @@ const content = {
         linkedin: "Mein LinkedIn-Profil",
         github: "Mein Github-Profil",
         learnMore: "Mehr erfahren",
-        about: "Über mich",
+        aboutText: "Erfahrener Projektentwickler mit einem Fokus auf Mikrocontroller und Einplatinencomputer...",
         education: "Bildung",
         beDegree: "B.E. Bachelor-Abschluss (Elektronik & Kommunikationstechnik) an der Anna University, Indien",
         mscDegree: "M.Sc. Master-Abschluss (Optische Technologien) an der Leibniz Universität Hannover, Deutschland",
-        aboutText: "Erfahrener Projektentwickler mit einem Fokus auf Mikrocontroller und Einplatinencomputer. Kompetent in Arduino, ESP32, ESP8266, STM32, Raspberry Pi und Nvidia Jetson. Erfahren in MatLab, Embedded C und Python. Starker Hintergrund in der Programm-Debugging, Wartung von Computerhardware, Schaltungsdesign (Basis) und Webdesign (Front-End). Engagiert für Unabhängigkeit, nehme ich Herausforderungen, Selbstdisziplin und die Autonomie an, um sinnvolle Ergebnisse zu erzielen.",
-        thesisTitle: "Masterarbeit an der Leibniz Universität Hannover",
-        thesisObjective: "Ziel: Entwicklung eines generativen KI-Frameworks zur Erstellung modifizierter Dermoskopie-Bildpaare, die maligne und benigne Läsionen veranschaulichen, um Patienten und Dermatologen mit einer Benutzeroberfläche zu schulen.",
-        bachelorThesis: "Bachelorarbeit an der Anna University, Chennai, Indien",
-        bachelorThesisObjective: "Ziel: Entwicklung eines neuartigen sicheren drahtlosen Kommunikationssystems, das moderne Codierung während der Übertragung und effektive Dekodierung während des Empfangs kombiniert, um die Datenübertragung über begrenzte Bandbreiten zu verbessern und gleichzeitig höchste Signal- und Datenschutzstandards aufrechtzuerhalten.",
+        thesisTitle1: "Masterarbeit an der Leibniz Universität Hannover",
+        thesisDesc1: "Fortschritte in der Diagnostik von Melanom-Hautkrebs und in der Ausbildung...",
+        thesisObjective1: "Ziel: Entwicklung eines generativen KI-Frameworks zur Erstellung modifizierter Dermoskopie-Bilder...",
+        thesisTools1: "Werkzeuge: Python, Pytorch, Deep Learning",
+        thesisTitle2: "Bachelorarbeit an der Anna University, Chennai, Indien",
+        thesisDesc2: "Ein neuartiger Ansatz für die Signalsicherheit und Videoübertragung mit geringerer Bandbreite.",
+        thesisObjective2: "Ziel: Entwicklung eines neuartigen sicheren drahtlosen Kommunikationssystems...",
+        thesisTools2: "Werkzeuge: Matlab",
         ongoingEvents: "Laufende Ereignisse",
-        ongoingEventRole: "Robotics-Programmierentwickler, Q.Vitec GmbH, Wunstorf, Deutschland",
-        ongoingEventDescription: "Entwurf, Entwicklung und Bereitstellung von Softwarelösungen für robotische Systeme. Zusammenarbeit bei der Integration von Software mit Roboterhardwarekomponenten. Erstellung von Algorithmen für die Roboterwahrnehmung, Navigation, Manipulation und Steuerung.",
-        projects: "Langfristige Projekte",
-        project1: "S.L.A.M",
-        project2: "Face-Tracker",
-        project3: "Pi Cluster",
-        experience: "Erfahrung",
-        workExperience: "Berufserfahrung",
-        volunteerExperience: "Projektentwickler (Freiwilliger)",
-        researchAssistant: "Wissenschaftlicher Mitarbeiter",
-        studentAssistant: "Studentische Hilfskraft",
-        internshipExperience: "Praktikumserfahrung",
-        softwareEngineerIntern: "Praktikant Softwareentwickler",
-        researchInternship: "Forschungspraktikum",
+        ongoingRole: "Robotics-Programmierentwickler, Q.Vitec GmbH, Wunstorf, Deutschland",
+        ongoingDesc: "Entwurf, Entwicklung und Bereitstellung von Softwarelösungen für robotische Systeme...",
+        ongoingTools: "Werkzeuge: Python",
+        experienceTitle: "Erfahrung",
+        projectsTitle: "Langfristige Projekte",
         contactMe: "Kontaktieren Sie mich",
-        email: "E-Mail-Symbol",
+        email: "E-Mail",
     }
 };
 
 // Function to update all text content based on the selected language
 function updateContent(language) {
-    document.getElementById('name').textContent = content[language].name;
-    document.getElementById('role').textContent = content[language].role;
-    document.getElementById('company').textContent = content[language].company;
-    document.getElementById('contact-info').textContent = content[language].contactInfo;
-    document.getElementById('linkedin').textContent = content[language].linkedin;
-    document.getElementById('github').textContent = content[language].github;
-    document.getElementById('learn-more').textContent = content[language].learnMore;
-    document.getElementById('about').textContent = content[language].about;
-    document.getElementById('education').textContent = content[language].education;
-    document.getElementById('be-degree').textContent = content[language].beDegree;
-    document.getElementById('msc-degree').textContent = content[language].mscDegree;
-    document.getElementById('about-text').textContent = content[language].aboutText;
-    document.getElementById('thesis-title').textContent = content[language].thesisTitle;
-    document.getElementById('thesis-objective').textContent = content[language].thesisObjective;
-    document.getElementById('bachelor-thesis').textContent = content[language].bachelorThesis;
-    document.getElementById('bachelor-thesis-objective').textContent = content[language].bachelorThesisObjective;
-    document.getElementById('ongoing-events').textContent = content[language].ongoingEvents;
-    document.getElementById('ongoing-event-role').textContent = content[language].ongoingEventRole;
-    document.getElementById('ongoing-event-description').textContent = content[language].ongoingEventDescription;
-    document.getElementById('projects').textContent = content[language].projects;
-    document.getElementById('project-1').textContent = content[language].project1;
-    document.getElementById('project-2').textContent = content[language].project2;
-    document.getElementById('project-3').textContent = content[language].project3;
-    document.getElementById('experience').textContent = content[language].experience;
-    document.getElementById('work-experience').textContent = content[language].workExperience;
-    document.getElementById('volunteer-experience').textContent = content[language].volunteerExperience;
-    document.getElementById('research-assistant').textContent = content[language].researchAssistant;
-    document.getElementById('student-assistant').textContent = content[language].studentAssistant;
-    document.getElementById('internship-experience').textContent = content[language].internshipExperience;
-    document.getElementById('software-engineer-intern').textContent = content[language].softwareEngineerIntern;
-    document.getElementById('research-internship').textContent = content[language].researchInternship;
-    document.getElementById('contact-me').textContent = content[language].contactMe;
-    document.getElementById('email').textContent = content[language].email;
+    document.getElementById('about-link').textContent = content[language].about;
+    document.getElementById('thesis-link').textContent = content[language].thesis;
+    document.getElementById('event-link').textContent = content[language].event;
+    document.getElementById('experience-link').textContent = content[language].experience;
+    document.getElementById('projects-link').textContent = content[language].projects;
+    document.getElementById('contact-link').textContent = content[language].contact;
+
+    document.querySelector('.title').textContent = content[language].name;
+    document.querySelector('.section__text__p2').textContent = content[language].role;
+    document.querySelector('.section__text__p2 + .section__text__p2').textContent = content[language].company;
+
+    document.querySelector('.btn-container button').textContent = content[language].contactInfo;
+    document.querySelector('#socials-container a img[alt="My LinkedIn profile"]').alt = content[language].linkedin;
+    document.querySelector('#socials-container a img[alt="My Github profile"]').alt = content[language].github;
+
+    document.querySelector('#about .title').textContent = content[language].about;
+    document.querySelector('#about p').textContent = content[language].aboutText;
+
+    document.querySelector('#Thesis .Thesis-title').textContent = content[language].thesisTitle1;
+    document.querySelector('#Thesis .Thesis-description').textContent = content[language].thesisDesc1;
+    document.querySelector('#Thesis .Thesis-idea').textContent = content[language].thesisObjective1;
+    document.querySelector('#Thesis .Thesis-tools').textContent = content[language].thesisTools1;
+
+    // Add more text elements based on your page structure
 }
 
-// Add event listener for the language toggle button
+// Event listener for the language toggle button
 document.getElementById("language-toggle").addEventListener("click", function () {
-    const currentLanguage = this.textContent === "EN" ? "de" : "en";
-    this.textContent = currentLanguage.toUpperCase(); // Switch button text
+    const currentLanguage = this.textContent === "DE" ? "de" : "en";
+    this.textContent = currentLanguage === "de" ? "EN" : "DE"; // Switch button text
     updateContent(currentLanguage);  // Update page content
 });
