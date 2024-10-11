@@ -71,37 +71,93 @@ const content = {
     }
 };
 
-// Function to update all text content based on the selected language
-function updateContent(language) {
-    document.getElementById('about-link').textContent = content[language].about;
-    document.getElementById('thesis-link').textContent = content[language].thesis;
-    document.getElementById('event-link').textContent = content[language].event;
-    document.getElementById('experience-link').textContent = content[language].experience;
-    document.getElementById('projects-link').textContent = content[language].projects;
-    document.getElementById('contact-link').textContent = content[language].contact;
+document.addEventListener('DOMContentLoaded', function () {
+    // Function to update all text content based on the selected language
+    function updateContent(language) {
+        // Update navigation links
+        if (document.getElementById('about-link')) {
+            document.getElementById('about-link').textContent = content[language].about;
+        }
+        if (document.getElementById('thesis-link')) {
+            document.getElementById('thesis-link').textContent = content[language].thesis;
+        }
+        if (document.getElementById('event-link')) {
+            document.getElementById('event-link').textContent = content[language].event;
+        }
+        if (document.getElementById('experience-link')) {
+            document.getElementById('experience-link').textContent = content[language].experience;
+        }
+        if (document.getElementById('projects-link')) {
+            document.getElementById('projects-link').textContent = content[language].projects;
+        }
+        if (document.getElementById('contact-link')) {
+            document.getElementById('contact-link').textContent = content[language].contact;
+        }
 
-    document.querySelector('.title').textContent = content[language].name;
-    document.querySelector('.section__text__p2').textContent = content[language].role;
-    document.querySelector('.section__text__p2 + .section__text__p2').textContent = content[language].company;
+        // Update profile section
+        const nameTitle = document.querySelector('.title');
+        if (nameTitle) {
+            nameTitle.textContent = content[language].name;
+        }
+        const role = document.querySelector('.section__text__p2');
+        if (role) {
+            role.textContent = content[language].role;
+        }
+        const company = document.querySelector('.section__text__p2 + .section__text__p2');
+        if (company) {
+            company.textContent = content[language].company;
+        }
 
-    document.querySelector('.btn-container button').textContent = content[language].contactInfo;
-    document.querySelector('#socials-container a img[alt="My LinkedIn profile"]').alt = content[language].linkedin;
-    document.querySelector('#socials-container a img[alt="My Github profile"]').alt = content[language].github;
+        // Update contact info
+        const contactButton = document.querySelector('.btn-container button');
+        if (contactButton) {
+            contactButton.textContent = content[language].contactInfo;
+        }
+        const linkedinIcon = document.querySelector('#socials-container a img[alt="My LinkedIn profile"]');
+        if (linkedinIcon) {
+            linkedinIcon.alt = content[language].linkedin;
+        }
+        const githubIcon = document.querySelector('#socials-container a img[alt="My Github profile"]');
+        if (githubIcon) {
+            githubIcon.alt = content[language].github;
+        }
 
-    document.querySelector('#about .title').textContent = content[language].about;
-    document.querySelector('#about p').textContent = content[language].aboutText;
+        // Update about section
+        const aboutTitle = document.querySelector('#about .title');
+        if (aboutTitle) {
+            aboutTitle.textContent = content[language].about;
+        }
+        const aboutText = document.querySelector('#about p');
+        if (aboutText) {
+            aboutText.textContent = content[language].aboutText;
+        }
 
-    document.querySelector('#Thesis .Thesis-title').textContent = content[language].thesisTitle1;
-    document.querySelector('#Thesis .Thesis-description').textContent = content[language].thesisDesc1;
-    document.querySelector('#Thesis .Thesis-idea').textContent = content[language].thesisObjective1;
-    document.querySelector('#Thesis .Thesis-tools').textContent = content[language].thesisTools1;
+        // Update thesis section
+        const thesisTitle1 = document.querySelector('#Thesis .Thesis-title');
+        if (thesisTitle1) {
+            thesisTitle1.textContent = content[language].thesisTitle1;
+        }
+        const thesisDesc1 = document.querySelector('#Thesis .Thesis-description');
+        if (thesisDesc1) {
+            thesisDesc1.textContent = content[language].thesisDesc1;
+        }
+        const thesisObjective1 = document.querySelector('#Thesis .Thesis-idea');
+        if (thesisObjective1) {
+            thesisObjective1.textContent = content[language].thesisObjective1;
+        }
+        const thesisTools1 = document.querySelector('#Thesis .Thesis-tools');
+        if (thesisTools1) {
+            thesisTools1.textContent = content[language].thesisTools1;
+        }
 
-    // Add more text elements based on your page structure
-}
+        // Add more sections if necessary...
+    }
 
-// Event listener for the language toggle button
-document.getElementById("language-toggle").addEventListener("click", function () {
-    const currentLanguage = this.textContent === "DE" ? "de" : "en";
-    this.textContent = currentLanguage === "de" ? "EN" : "DE"; // Switch button text
-    updateContent(currentLanguage);  // Update page content
+    // Event listener for the language toggle button
+    document.getElementById("language-toggle").addEventListener("click", function () {
+        const currentLanguage = this.textContent === "DE" ? "de" : "en";
+        this.textContent = currentLanguage === "de" ? "EN" : "DE"; // Switch button text
+        updateContent(currentLanguage);  // Update page content
+    });
 });
+
