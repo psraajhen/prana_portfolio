@@ -23,6 +23,30 @@
             <!-- Link to German version -->
             <li><a href="index_de.html">DE</a></li>
         </ul>
+          <!-- Language Toggle Switch -->
+    <div class="language-switch">
+        <div class="switch">
+            <input id="language-toggle" class="check-toggle check-toggle-round-flat" type="checkbox">
+            <label for="language-toggle"></label>
+            <span class="on">DE</span>
+            <span class="off">EN</span>
+        </div>
+    </div>
+  </nav>
+
+    <script>
+        // JavaScript for handling language toggle
+        document.getElementById('language-toggle').addEventListener('change', function () {
+            if (this.checked) {
+                // If toggle is ON (German), redirect to the German version
+                window.location.href = 'index_de.html';
+            } else {
+                // If toggle is OFF (English), redirect to the English version
+                window.location.href = 'index.html';
+            }
+        });
+    </script>
+
     </div>
 </nav>
     </nav>
