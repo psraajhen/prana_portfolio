@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/jpeg" href="assets/icon4.png"> 
-    <title>Prana Portfolio - Deutsch </title>
+    <link rel="icon" type="image/jpeg" href="assets/icon4.png">
+    <title>Prana Portfolio - Deutsch</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
 </head>
 <body>
+
+    <!-- Desktop Navigation -->
     <nav id="desktop-nav">
         <div class="logo">Pranav</div>
         <div>
@@ -19,10 +21,13 @@
                 <li><a href="#ongoing-events">Veranstaltung</a></li>
                 <li><a href="#experience">Erfahrung</a></li>
                 <li><a href="#contact">Kontakt</a></li>
-               <li><a href="index_de.html" style="font-weight:bold">DE</a> | <a href="index.html">EN</a></li><!-- Link to English version -->
+                <!-- Link to English version -->
+                <li><a href="index_de.html" style="font-weight:bold">DE</a> | <a href="index.html">EN</a></li>
             </ul>
         </div>
     </nav>
+
+    <!-- Mobile Hamburger Navigation -->
     <nav id="hamburger-nav">
         <div class="logo">Pranav</div>
         <div class="hamburger-menu">
@@ -32,13 +37,17 @@
                 <span></span>
             </div>
             <div class="menu-links">
-                <li><a href="#about" onclick="toggleMenu()">Über</a></li>
-                <li><a href="#Thesis" onclick="toggleMenu()">Abschluss</a></li>
-                <li><a href="#ongoing-events" onclick="toggleMenu()">Veranstaltung</a></li>
-                <li><a href="#experience" onclick="toggleMenu()">Erfahrung</a></li>
-                <li><a href="#contact" onclick="toggleMenu()">Kontakt</a></li>
-                <div class="menu-language">
-                    <li><a href="index_de.html" style="font-weight:bold">DE</a> | <a href="index.html">EN</a></li>
+                <ul>
+                    <li><a href="#about" onclick="toggleMenu()">Über</a></li>
+                    <li><a href="#Thesis" onclick="toggleMenu()">Abschluss</a></li>
+                    <li><a href="#ongoing-events" onclick="toggleMenu()">Veranstaltung</a></li>
+                    <li><a href="#experience" onclick="toggleMenu()">Erfahrung</a></li>
+                    <li><a href="#contact" onclick="toggleMenu()">Kontakt</a></li>
+                    <!-- Language switcher -->
+                    <li class="menu-language">
+                        <a href="index_de.html" style="font-weight:bold">DE</a> | <a href="index.html">EN</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
