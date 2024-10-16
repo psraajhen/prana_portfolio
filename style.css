@@ -131,25 +131,26 @@ a:hover {
 
 /* Language switcher styles */
 .menu-language {
+  display: flex;             /* Flexbox layout */
+  justify-content: center;    /* Center horizontally */
+  align-items: center;        /* Center vertically */
   text-align: center;
   padding: 10px;
   background-color: #f0f0f0;
   border-top: 1px solid #ccc; /* Optional, to visually separate the language switcher */
+  white-space: nowrap;        /* Prevents line breaks between DE and EN */
 }
-/* Remove line breaks for language switcher */
-.menu-language {
-  white-space: nowrap; /* Prevents line breaks between DE and EN */
-}
+
 .menu-language a {
   font-size: 1.2rem;
   text-decoration: none;
   color: black;
-  margin: 0 5px;
-  transition: color 0.3s ease-in-out;
+  margin: 0 5px;            /* Add spacing between DE and EN */
+  display: inline;           /* Ensure DE and EN stay on the same line */
 }
 
 .menu-language a:hover {
-  color: #007bff; /* Optional hover effect for language links */
+  color: #007bff;            /* Optional hover effect for language links */
 }
 
 /* Hamburger icon transition */
