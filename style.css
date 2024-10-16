@@ -607,3 +607,17 @@ input.check-toggle-round-flat:checked + label {
 input.check-toggle-round-flat:checked + label:after {
   margin-left: 44px;
 }
+
+/* Language switcher fixed at the bottom of the menu */
+.menu-language {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #ccc; /* Optional, for a divider above the language */
+}
+
+/* Ensure hamburger menu is shown and centered properly */
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: flex;
+    }
+}
