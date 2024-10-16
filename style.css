@@ -136,7 +136,10 @@ a:hover {
   background-color: #f0f0f0;
   border-top: 1px solid #ccc; /* Optional, to visually separate the language switcher */
 }
-
+/* Remove line breaks for language switcher */
+.menu-language {
+  white-space: nowrap; /* Prevents line breaks between DE and EN */
+}
 .menu-language a {
   font-size: 1.2rem;
   text-decoration: none;
