@@ -8,8 +8,17 @@
     <title>Prana Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
+    <style>
+        .lang-content {
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+    </style>
 </head>
 <body>
+   <!-- Language Switcher -->
    <nav id="desktop-nav">
     <div class="logo">Pranav</div>
     <div>
@@ -19,153 +28,115 @@
             <li><a href="#ongoing-events">Event</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#contact">Contact</a></li>
-            <!-- Link to German version -->
-            <li><a href="index_de.html">DE</a> | <a href="index.html" style="font-weight:bold">EN</a></li>
+            <!-- Language switch buttons -->
+            <li><button onclick="changeLanguage('en')">EN</button> | <button onclick="changeLanguage('de')">DE</button></li>
         </ul>
-        
-    </nav>
-       <!-- Hamburger Navigation for Mobile -->
-    <nav id="hamburger-nav">
-        <div class="logo">Pranav</div>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
+    </div>
+   </nav>
+
+   <!-- English Content -->
+   <div id="en" class="lang-content active">
+        <!-- Profile Section -->
+        <section id="profile">
+            <div class="section__pic-container">
+                <img src="./assets/prana.jpg" alt="Pranav profile picture" />
             </div>
-            <div class="menu-links">
-                <ul>
-                    <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                    <li><a href="#Thesis" onclick="toggleMenu()">Thesis</a></li>
-                    <li><a href="#ongoing-events" onclick="toggleMenu()">Event</a></li>
-                    <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-                    <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-                    <!-- Add the language switcher here for mobile view -->
-                     <div class="menu-language">
-                    <a href="index_de.html">DE</a> | <a href="index.html" style="font-weight:bold">EN</a>
+            <div class="section__text">
+                <p class="section__text__p1">Hello, I'm</p>
+                <h1 class="title">Pranav B.E., M.Sc.</h1>
+                <p class="section__text__p2">Robotics Programming Developer</p>
+                <p class="section__text__p2">Q.Vitec GmbH</p>
+                <div class="btn-container">
+                    <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Info</button>
                 </div>
-                </ul>
+                <div id="socials-container">
+                    <a href="https://linkedin.com/in/psraajhen" target="_blank">
+                        <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon" />
+                    </a>
+                    <a href="https://github.com/psraajhen" target="_blank">
+                        <img src="./assets/github.png" alt="My Github profile" class="icon" />
+                    </a>
+                </div>
             </div>
-        </div>
-    </nav>  
-    <section id="profile">
-        <div class="section__pic-container">
-            <img src="./assets/prana.jpg" alt="Pranav profile picture" />
-        </div>
-        <div class="section__text">
-            <p class="section__text__p1">Hello, I'm</p>
-            <h1 class="title">Pranav B.E., M.Sc.</h1>
-            <p class="section__text__p2">Robotics Programming Developer</p>
-            <p class="section__text__p2">Q.Vitec GmbH</p>
-            <div class="btn-container">
-                <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Info</button>
-            </div>
-            <div id="socials-container">
-                <a href="https://linkedin.com/in/psraajhen" target="_blank">
-                    <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon" />
-                </a>
-                <a href="https://github.com/psraajhen" target="_blank">
-                    <img src="./assets/github.png" alt="My Github profile" class="icon" />
-                </a>
-            </div>
-        </div>
-    </section>
-    <section id="about">
-        <p class="section__text__p1">Get To Know More</p>
-        <h1 class="title">About Me</h1>
-        <div class="section-container">
-            <div class="about-details-container">
-                <div class="about-containers">
-                    <div class="details-container" style="margin: 0 10%">
-                        <img src="./assets/education.png" alt="Education icon" class="icon" />
-                        <h3>Education</h3>
-                        <p>
-                            B.E. Bachelors Degree (Electronics & Communication Engineering)
-                            at Anna University, India
-                            <br />
-                            M.Sc. Masters Degree (Optical Technologies) at Leibniz
-                            University Hannover, Germany
-                        </p>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <p class="section__text__p1">Get To Know More</p>
+            <h1 class="title">About Me</h1>
+            <div class="section-container">
+                <div class="about-details-container">
+                    <div class="about-containers">
+                        <div class="details-container" style="margin: 0 10%">
+                            <img src="./assets/education.png" alt="Education icon" class="icon" />
+                            <h3>Education</h3>
+                            <p>B.E. Bachelors Degree (Electronics & Communication Engineering)<br>Anna University, India<br>M.Sc. (Optical Technologies)<br>Leibniz University Hannover, Germany</p>
+                        </div>
+                    </div>
+                    <div class="text-container">
+                        <p>Experienced project developer with a focus on microcontrollers and single-board computers. Proficient in Arduino, ESP32, ESP8266, STM32, Raspberry Pi, and Nvidia Jetson. Skilled in MatLab, Embedded C, and Python. Strong background in program debugging, computer hardware maintenance, circuit designing (Basic), and web designing (front-end). Committed to independence, I embrace challenges, self-discipline, and the autonomy to create meaningful outcomes.</p>
                     </div>
                 </div>
-                <div class="text-container">
-                    <p>
-                        Experienced project developer with a focus on microcontrollers and
-                        single-board computers. Proficient in Arduino, ESP32, ESP8266,
-                        STM32, Raspberry Pi, and Nvidia Jetson. Skilled in MatLab,
-                        Embedded C, and Python. Strong background in program debugging, computer hardware maintenance, circuit
-                        designing (Basic), and web designing (front-end). Committed to independence, I embrace challenges, self-discipline, and the autonomy to create meaningful outcomes.
-                    </p>
+            </div>
+        </section>
+
+        <section id="Thesis">
+            <p class="section__text__p1">Check Out My</p>
+            <h1 class="title">Thesis</h1>
+            <div class="Thesis">
+                <h2 class="Thesis-title">Master's Thesis at Leibniz University Hannover -Head of Optical Technologies (HOT)</h2>
+                <p class="Thesis-description">Title: Advancing Melanoma Skin Cancer Diagnostics and Education: Integrating Deep Learning, Generative AI, and Attention Mechanisms for Enhanced Clinical Decision Support.</p>
+                <p class="Thesis-idea">Objective: Develop a generative AI framework to create modified dermoscopic image pairs, illustrating malignancy and benign lesions, to educate patients and dermatologists with user interface.</p>
+                <p class="Thesis-tools">Tools: Python, Pytorch, Deep Learning</p>
+            </div>
+            <div class="Thesis">
+                <h2 class="Thesis-title">Bachelor's Thesis at Anna University, Chennai, India</h2>
+                <p class="Thesis-description">Title: A Novel Approach for Signal Security and Video Transmission using Lower Bandwidth Technique.</p>
+                <p class="Thesis-idea">Objective: Create a novel secure wireless communication system that combines cutting-edge encoding during transmission and effective decoding during reception to improve data transfer over limited bandwidths while maintaining the highest levels of signal security and privacy.</p>
+                <p class="Thesis-tools">Tools: Matlab</p>
+            </div>
+        </section>
+
+
+        <!-- Ongoing Events Section -->
+        <section id="ongoing-events">
+            <p class="section__text__p1">Check Out My</p>
+            <h1 class="title">Ongoing Events</h1>
+            <div class="ongoing-events-container">
+                <div class="event">
+                    <h2 class="event-title">Robotics Programming Developer</h2>
+                    <p class="event-description">Design, develop, and deploy software solutions for robotic systems. Tools: Python</p> 
+                    <p class="event-date">Start date: April, 2024</p>
                 </div>
             </div>
-        </div>
-    </section>
-    <section id="Thesis">
-        <p class="section__text__p1">Check Out My</p>
-        <h1 class="title">Thesis</h1>
-        <div class="Thesis">
-            <h2 class="Thesis-title">Master's Thesis at Leibniz University Hannover -Head of Optical Technologies (HOT)</h2>
-            <p class="Thesis-description">Title: Advancing Melanoma Skin Cancer Diagnostics and Education: Integrating Deep Learning, Generative AI, and Attention Mechanisms for Enhanced Clinical Decision Support.</p>
-            <p class="Thesis-idea">Objective: Develop a generative AI framework to create modified dermoscopic image pairs, illustrating malignancy and benign lesions, to educate patients and dermatologists with user interface.</p>
-            <p class="Thesis-tools">Tools: Python, Pytorch, Deep Learning</p>
-        </div>
-        <div class="Thesis">
-            <h2 class="Thesis-title">Bachelor's Thesis at Anna University, Chennai, India</h2>
-            <p class="Thesis-description">Title: A Novel Approach for Signal Security and Video Transmission using Lower Bandwidth Technique.</p>
-            <p class="Thesis-idea">Objective: Create a novel secure wireless communication system that combines cutting-edge encoding during transmission and effective decoding during reception to improve data transfer over limited bandwidths while maintaining the highest levels of signal security and privacy.</p>
-            <p class="Thesis-tools">Tools: Matlab</p>
-        </div>
-    </section>
-    <section id="ongoing-events">
-        <p class="section__text__p1">Check Out My</p>
-        <h1 class="title">Ongoing Events</h1>
-        <div class="ongoing-events-container">
-            <div class="event">
-                <h2 class="event-title">Robotics Programming Developer, Q.Vitec GmbH, Wunstrof, Germany</h2>
-                <p class="Thesis-description">Design, develop, and deploy software solutions for robotic systems. Collaborate to integrate software with robotic hardware components. Create algorithms for robotic perception, navigation, manipulation, and control</p>
-                <p class="Thesis-tools">Tools: Python</p> 
-                <p class="event-date">Start date: April, 2024 - Present</p>
-            </div>
-        </div>
-    </section>
-    <section id="experience">
-        <p class="section__text__p1">Explore My</p>
-        <h1 class="title">Experience</h1>
-        <div class="experience-details-container">
-            <div class="experience-containers">
-                <div class="details-container">
-                    <h2 class="experience-sub-title" style="margin-bottom: 1rem !important">Working Experience</h2>
-                    <div class="article-container-exp">
-                        <article class="article-exp">
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-                            <div class="article-exp-body">
-                                <h3>Project Developer (Volunteer)</h3>
-                                <p>MakerLab Hannover (February 2019 - Present)</p>
-                            </div>
-                        </article>
-                        <article class="article-exp">
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-                            <div class="article-exp-body">
-                                <h3>Research Assistant</h3>
-                                <p>Leibniz Universität Hannover - Institut für Umformtechnik und Umformmaschinen (February 2024 - March 2024)</p>
-                            </div>
-                        </article>
-                        <article class="article-exp">
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-                            <div class="article-exp-body">
-                                <h3>Student Assistant</h3>
-                                <p>Leibniz Universität Hannover - Institut für Umformtechnik und Umformmaschinen (August 2023 - January 2024)</p>
-                            </div>
-                        </article>
-                        <article class="article-exp">
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-                            <div class="article-exp-body">
-                                <h3>Student Assistant</h3>
-                                <p>Leibniz Universität Hannover - Institut für Quantenoptik (IQO) (January 2021 - June 2021)</p>
-                            </div>
-                        </article>
-                    </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience">
+            <p class="section__text__p1">Explore My</p>
+            <h1 class="title">Experience</h1>
+            <div class="experience-details-container">
+                <h2 class="experience-sub-title">Working Experience</h2>
+                <div class="article-container-exp">
+                    <article class="article-exp">
+                        <h3>Project Developer (Volunteer)</h3>
+                        <p>MakerLab Hannover (February 2019 - Present)</p>
+                    </article>
+                    <article class="article-exp">
+                        <h3>Research Assistant</h3>
+                        <p>Leibniz Universität Hannover - Institut für Umformtechnik und Umformmaschinen (February 2024 - March 2024)</p>
+                    </article>
+                    <article class="article-exp">
+                        <h3>Student Assistant</h3>
+                        <p>Leibniz Universität Hannover - Institut für Umformtechnik und Umformmaschinen (August 2023 - January 2024)</p>
+                    </article>
+                    <article class="article-exp">
+                        <h3>Student Assistant</h3>
+                        <p>Leibniz Universität Hannover - Institut für Quantenoptik (IQO) (January 2021 - June 2021)</p>
+                    </article>
                 </div>
+
+                <!-- Internship Experience Section -->
                 <div class="details-container">
                     <h2 class="experience-sub-title" style="margin-bottom: 1rem !important">Internship Experience</h2>
                     <div class="article-container-exp">
@@ -193,36 +164,189 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-      <section id="contact">
-        <p class="section__text__p1">Get in Touch</p>
-        <h1 class="title">Contact Me</h1>
-        <div class="contact-info-upper-container">
-            <div class="contact-info-container">
-                <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
-                <p><a href="mailto:psraajhen@gmail.com">psraajhen@gmail.com</a></p>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <p class="section__text__p1">Get in Touch</p>
+            <h1 class="title">Contact Me</h1>
+            <div class="contact-info-upper-container">
+                <div class="contact-info-container">
+                    <p><a href="mailto:psraajhen@gmail.com">psraajhen@gmail.com</a></p>
+                </div>
             </div>
-            <div class="contact-info-container">
-                <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
-                <p><a href="https://www.linkedin.com/in/psraajhen" target="_blank">LinkedIn</a></p>
+        </section>
+   </div>
+
+   <!-- German Content -->
+   <div id="de" class="lang-content">
+        <!-- Profile Section (German) -->
+        <section id="profile">
+            <div class="section__pic-container">
+                <img src="./assets/prana.jpg" alt="Pranav Profilbild" />
             </div>
-        </div>
-    </section>
-    <footer>
-        <nav>
-            <div class="nav-links-container">
-                <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#Thesis">Thesis</a></li>
-                    <li><a href="#ongoing-events">Event</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+            <div class="section__text">
+                <p class="section__text__p1">Hallo, ich bin</p>
+                <h1 class="title">Pranav B.E., M.Sc.</h1>
+                <p class="section__text__p2">Roboterprogrammierungsentwickler</p>
+                <p class="section__text__p2">Q.Vitec GmbH</p>
+                <div class="btn-container">
+                    <button class="btn btn-color-1" onclick="location.href='./#contact'">Kontakt Info</button>
+                </div>
+                <div id="socials-container">
+                    <a href="https://linkedin.com/in/psraajhen" target="_blank">
+                        <img src="./assets/linkedin.png" alt="Mein LinkedIn-Profil" class="icon" />
+                    </a>
+                    <a href="https://github.com/psraajhen" target="_blank">
+                        <img src="./assets/github.png" alt="Mein Github-Profil" class="icon" />
+                    </a>
+                </div>
             </div>
-        </nav>
-        <p>Copyright &#169; 2024 Pranav. All Rights Reserved.</p>
-    </footer>
-    <script src="script.js"></script>
+        </section>
+
+        <!-- About Section (German) -->
+        <section id="about">
+            <p class="section__text__p1">Mehr Über Mich</p>
+            <h1 class="title">Über Mich</h1>
+            <div class="section-container">
+                <div class="about-details-container">
+                    <div class="about-containers">
+                        <div class="details-container" style="margin: 0 10%">
+                            <img src="./assets/education.png" alt="Bildungssymbol" class="icon" />
+                            <h3>Bildung</h3>
+                            <p>B.E. Bachelor (Elektronik und Kommunikation)<br>Anna University, Indien<br>M.Sc. (Optische Technologien)<br>Leibniz Universität Hannover, Deutschland</p>
+                        </div>
+                    </div>
+                    <div class="text-container">
+                        <p> Erfahrener Projektentwickler mit einem Fokus auf Mikrocontroller und
+                            Einplatinencomputer. Kompetent in Arduino, ESP32, ESP8266,
+                            STM32, Raspberry Pi und Nvidia Jetson. Erfahren in MatLab,
+                            Embedded C und Python. Starker Hintergrund in der Programm-Debugging, Wartung von Computerhardware, Schaltungsdesign (Basis) und Webdesign (Front-End). Engagiert für Unabhängigkeit, nehme ich Herausforderungen, Selbstdisziplin und die Autonomie an, um sinnvolle Ergebnisse zu erzielen.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="Thesis">
+            <p class="section__text__p1">Entdecken Sie meine</p>
+            <h1 class="title">Abschlussarbeit</h1>
+            <div class="Thesis">
+                <h2 class="Thesis-title">Masterarbeit an der Leibniz Universität Hannover - Leiter der Optischen Technologien (HOT)</h2>
+                <p class="Thesis-description">Titel: Fortschritte in der Diagnostik von Melanom-Hautkrebs und in der Ausbildung: Integration von Deep Learning, generativer KI und Aufmerksamkeitsmechanismen zur Verbesserung der klinischen Entscheidungsunterstützung.</p>
+                <p class="Thesis-idea">Ziel: Entwicklung eines generativen KI-Frameworks zur Erstellung modifizierter Dermoskopie-Bildpaare, die maligne und benigne Läsionen veranschaulichen, um Patienten und Dermatologen mit einer Benutzeroberfläche zu schulen.</p>
+                <p class="Thesis-tools">Werkzeuge: Python, Pytorch, Deep Learning</p>
+            </div>
+            <div class="Thesis">
+                <h2 class="Thesis-title">Bachelorarbeit an der Anna University, Chennai, Indien</h2>
+                <p class="Thesis-description">Titel: Ein neuartiger Ansatz für Signalsicherheit und Videoübertragung unter Verwendung einer Technik für geringere Bandbreiten.</p>
+                <p class="Thesis-idea">Ziel: Entwicklung eines neuartigen sicheren drahtlosen Kommunikationssystems, das während der Übertragung modernste Codierung kombiniert und bei der Empfangsseite eine effektive Dekodierung ermöglicht, um die Datenübertragung über begrenzte Bandbreiten zu verbessern und gleichzeitig höchste Signal- und Datenschutzstandards zu gewährleisten.</p>
+                <p class="Thesis-tools">Werkzeuge: Matlab</p>
+            </div>
+        </section>
+    
+
+        <!-- Ongoing Events (German) -->
+        <section id="ongoing-events">
+            <p class="section__text__p1">Laufende Ereignisse</p>
+            <h1 class="title">Aktuelle Ereignisse</h1>
+            <div class="ongoing-events-container">
+                <div class="event">
+                    <h2 class="event-title">Roboterprogrammierungsentwickler</h2>
+                    <p class="event-description">Softwarelösungen für Robotersysteme entwickeln und integrieren. Werkzeuge: Python</p> 
+                    <p class="event-date">Beginn: April, 2024</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <p class="section__text__p1">Erkunden Sie meine</p>
+            <h1 class="title">Erfahrung</h1>
+            <div class="experience-details-container">
+                <div class="experience-containers">
+                    <div class="details-container">
+                        <h2 class="experience-sub-title" style="margin-bottom: 1rem !important">Berufserfahrung</h2>
+                        <div class="article-container-exp">
+                            <article class="article-exp">
+                                <img src="./assets/checkmark.png" alt="Erfahrungssymbol" class="icon" />
+                                <div class="article-exp-body">
+                                    <h3>Projektentwickler (Freiwilliger)</h3>
+                                    <p>MakerLab Hannover (Februar 2019 - Gegenwart)</p>
+                                </div>
+                            </article>
+                            <article class="article-exp">
+                                <img src="./assets/checkmark.png" alt="Erfahrungssymbol" class="icon" />
+                                <div class="article-exp-body">
+                                    <h3>Wissenschaftlicher Mitarbeiter</h3>
+                                    <p>Leibniz Universität Hannover - Institut für Umformtechnik und Umformmaschinen (Februar 2024 - März 2024)</p>
+                                </div>
+                            </article>
+                            <article class="article-exp">
+                                <img src="./assets/checkmark.png" alt="Erfahrungssymbol" class="icon" />
+                                <div class="article-exp-body">
+                                    <h3>Studentische Hilfskraft</h3>
+                                    <p>Leibniz Universität Hannover - Institut für Umformtechnik und Umformmaschinen (August 2023 - Januar 2024)</p>
+                                </div>
+                            </article>
+                            <article class="article-exp">
+                                <img src="./assets/checkmark.png" alt="Erfahrungssymbol" class="icon" />
+                                <div class="article-exp-body">
+                                    <h3>Studentische Hilfskraft</h3>
+                                    <p>Leibniz Universität Hannover - Institut für Quantenoptik (IQO) (Januar 2021 - Juni 2021)</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="details-container">
+                        <h2 class="experience-sub-title" style="margin-bottom: 1rem !important">Praktikumserfahrung</h2>
+                        <div class="article-container-exp">
+                            <article class="article-exp">
+                                <img src="./assets/checkmark.png" alt="Erfahrungssymbol" class="icon" />
+                                <div class="article-exp-body">
+                                    <h3>Praktikant Softwareentwickler</h3>
+                                    <p>Profihost AG, Hannover (Juni 2020 - August 2020)</p>
+                                </div>
+                            </article>
+                            <article class="article-exp">
+                                <img src="./assets/checkmark.png" alt="Erfahrungssymbol" class="icon" />
+                                <div class="article-exp-body">
+                                    <h3>F&E-Praktikant (Remote-Arbeit)</h3>
+                                    <p>Elight SPM, Indien (April 2020 - Juli 2020)</p>
+                                </div>
+                            </article>
+                            <article class="article-exp">
+                                <img src="./assets/checkmark.png" alt="Erfahrungssymbol" class="icon" />
+                                <div class="article-exp-body">
+                                    <h3>Forschungspraktikum</h3>
+                                    <p>Hannoversches Zentrum für Optische Technologien, Leibniz Universität Hannover (Mai 2023 - Juni 2023)</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section (German) -->
+        <section id="contact">
+            <p class="section__text__p1">Kontaktieren Sie Mich</p>
+            <h1 class="title">Kontakt</h1>
+            <div class="contact-info-upper-container">
+                <div class="contact-info-container">
+                    <p><a href="mailto:psraajhen@gmail.com">psraajhen@gmail.com</a></p>
+                </div>
+            </div>
+        </section>
+   </div>
+
+   <!-- JavaScript for toggling between English and German -->
+   <script>
+       function changeLanguage(lang) {
+           var contents = document.getElementsByClassName('lang-content');
+           for (var i = 0; i < contents.length; i++) {
+               contents[i].classList.remove('active');
+           }
+           document.getElementById(lang).classList.add('active');
+       }
+   </script>
 </body>
 </html>
