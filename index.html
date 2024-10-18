@@ -15,6 +15,90 @@
         .active {
             display: block;
         }
+        
+        /* Style for hamburger icon and menu */
+        #hamburger-nav .menu-links {
+            display: none;
+        }
+
+        #hamburger-nav.open .menu-links {
+            display: block;
+            position: absolute;
+            top: 100%; 
+            background-color: white;
+            width: 100%;
+            z-index: 1;
+        }
+
+        /* Hide the hamburger icon on larger screens */
+        @media (min-width: 768px) {
+            #hamburger-nav {
+                display: none;
+            }
+        }
+
+        /* Show hamburger icon on smaller screens */
+        @media (max-width: 767px) {
+            #desktop-nav {
+                display: none;
+            }
+
+            #hamburger-nav {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 10px;
+                background-color: #f0f0f0;
+                height: 50px;
+            }
+
+            .hamburger-icon {
+                cursor: pointer;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                height: 24px;
+                width: 30px;
+            }
+
+            .hamburger-icon span {
+                background-color: #333;
+                height: 4px;
+                width: 100%;
+                border-radius: 5px;
+            }
+
+            .menu-links ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                background-color: #f0f0f0;
+            }
+
+            .menu-links ul li {
+                padding: 10px;
+                border-bottom: 1px solid #ddd;
+            }
+
+            .menu-links ul li a {
+                text-decoration: none;
+                color: #333;
+            }
+
+            .menu-language {
+                display: flex;
+                justify-content: center;
+                padding: 10px;
+            }
+
+            .menu-language a {
+                padding: 0 10px;
+                text-decoration: none;
+                color: #333;
+            }
+        }
     </style>
 </head>
 <body>
@@ -33,30 +117,55 @@
         </ul>
     </div>
    </nav>
-       <!-- Hamburger Navigation for Mobile -->
+   <!-- Hamburger Navigation for Mobile -->
     <nav id="hamburger-nav">
         <div class="logo">Pranav</div>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="menu-links">
-                <ul>
-                    <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                    <li><a href="#Thesis" onclick="toggleMenu()">Thesis</a></li>
-                    <li><a href="#ongoing-events" onclick="toggleMenu()">Event</a></li>
-                    <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-                    <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-                    <!-- Add the language switcher here for mobile view -->
-                     <div class="menu-language">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="menu-links">
+            <ul>
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#Thesis" onclick="toggleMenu()">Thesis</a></li>
+                <li><a href="#ongoing-events" onclick="toggleMenu()">Event</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+                <!-- Add the language switcher here for mobile view -->
+                <div class="menu-language">
                     <a href="index_de.html">DE</a> | <a href="index.html" style="font-weight:bold">EN</a>
                 </div>
-                </ul>
-            </div>
+            </ul>
         </div>
-    </nav> 
+    </nav>
+
+   <!-- Add your page content here -->
+   <div id="en" class="lang-content active">
+       <!-- Page content -->
+   </div>
+
+   <div id="de" class="lang-content">
+       <!-- German Page content -->
+   </div>
+
+   <!-- JavaScript for toggling the hamburger menu and switching languages -->
+   <script>
+       function toggleMenu() {
+           var hamburgerNav = document.getElementById("hamburger-nav");
+           hamburgerNav.classList.toggle("open");
+       }
+
+       function changeLanguage(lang) {
+           var contents = document.getElementsByClassName('lang-content');
+           for (var i = 0; i < contents.length; i++) {
+               contents[i].classList.remove('active');
+           }
+           document.getElementById(lang).classList.add('active');
+       }
+   </script>
+
+
    <!-- English Content -->
    <div id="en" class="lang-content active">
         <!-- Profile Section -->
