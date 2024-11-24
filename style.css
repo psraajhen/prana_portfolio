@@ -37,6 +37,8 @@ nav {
   justify-content: space-around;
   align-items: center;
   height: 17vh;
+  background-color: #007BFF; /* Blue background for the nav bar */
+  color: white; /* White text for nav bar */
 }
 
 .nav-links {
@@ -46,13 +48,12 @@ nav {
 }
 
 a {
-  color: black;
+  color: white; /* Change text color to white */
   text-decoration: none;
-  text-decoration-color: white;
 }
 
 a:hover {
-  color: grey;
+  color: lightgrey; /* Softer hover effect */
   text-decoration: underline;
   text-underline-offset: 1rem;
   text-decoration-color: rgb(181, 181, 181);
@@ -60,6 +61,7 @@ a:hover {
 
 .logo {
   font-size: 2rem;
+  color: white; /* Ensure the logo text is white */
 }
 
 .logo:hover {
