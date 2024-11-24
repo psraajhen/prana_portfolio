@@ -4,15 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pranav Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <style>
         /* Body Styling */
         body {
-            background: linear-gradient(135deg, #f0f4f8, #d9e3ed); /* Professional gradient */
-            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            color: #333;
+            font-family: 'Arial', sans-serif;
         }
 
         /* Navbar Styling */
@@ -23,6 +20,9 @@
             padding: 10px 20px;
             background: #007acc;
             color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         nav .logo {
@@ -30,95 +30,39 @@
             font-weight: bold;
         }
 
-        nav .nav-links, nav .menu-links {
+        nav .nav-links {
             list-style: none;
-            padding: 0;
-            margin: 0;
             display: flex;
             gap: 15px;
+            margin: 0;
+            padding: 0;
         }
 
-        nav .nav-links a, nav .menu-links a {
+        nav .nav-links a {
             text-decoration: none;
             color: white;
+            font-size: 1em;
             transition: color 0.3s ease;
         }
 
-        nav .nav-links a:hover, nav .menu-links a:hover {
+        nav .nav-links a:hover {
             color: #00d4ff;
         }
 
-        /* Hamburger Navigation Styling */
-        #hamburger-nav {
-            display: none; /* Hidden by default */
-        }
-
-        .hamburger-menu {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-        }
-
-        .hamburger-icon span {
-            background: white;
-            display: block;
-            height: 3px;
-            width: 25px;
-            margin: 5px 0;
-            transition: all 0.3s ease;
-        }
-
-        /* Profile Section Styling */
-        #profile {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        /* Profile Section Placeholder */
+        section {
+            padding: 50px 20px;
             text-align: center;
-            padding: 50px;
-            animation: fadeIn 1s ease-in-out;
         }
 
-        #profile .section__pic-container img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 5px solid #007acc;
+        section h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
         }
 
-        #profile .section__text {
-            margin-left: 20px;
-        }
-
-        #profile .section__text h1 {
-            font-size: 2.5em;
-            margin: 10px 0;
-        }
-
-        #profile .btn-container button {
-            background: #007acc;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-
-        #profile .btn-container button:hover {
-            background: #005f99;
-            transform: scale(1.05);
-        }
-
-        /* Fade-in Animation */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        section p {
+            font-size: 1.2em;
+            color: #555;
         }
     </style>
 </head>
