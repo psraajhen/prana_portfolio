@@ -28,34 +28,50 @@ a,
 
 /* DESKTOP NAV */
 
+/* Navigation Bar General Styles */
+nav {
+  background-color: #0077b6; /* Primary color */
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center; /* Center-align the tabs */
+  align-items: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adds a slight shadow for depth */
+}
+
 nav,
 .nav-links {
   display: flex;
 }
 
-nav {
-  justify-content: space-around;
-  align-items: center;
-  height: 17vh;
-}
-
+/* Navigation Links */
 .nav-links {
-  gap: 2rem;
   list-style: none;
+  gap: 2rem;
   font-size: 1.5rem;
+  display: flex;
+  margin: 0;
 }
 
+/* Links (Tabs) Styles */
 a {
-  color: black;
   text-decoration: none;
-  text-decoration-color: white;
+  color: #ffffff; /* White text for contrast */
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 10px 15px; /* Padding for clickable area */
+  border-radius: 5px; /* Smooth rounded corners */
+  transition: background-color 300ms ease, color 300ms ease;
 }
 
 a:hover {
-  color: grey;
-  text-decoration: underline;
-  text-underline-offset: 1rem;
-  text-decoration-color: rgb(181, 181, 181);
+  background-color: #fca311; /* Hover color: warm gold */
+  color: #ffffff; /* Ensure text stays white */
+  text-decoration: none; /* No underline */
+}
+
+a:active {
+  background-color: #fca311; /* Active tab color */
+  font-weight: bold; /* Highlight the active tab */
 }
 
 .logo {
