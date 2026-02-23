@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,36 +15,30 @@ html{scroll-behavior:smooth;}
 
 body{
   font-family:'Poppins',sans-serif;
-  background:#0f172a;
-}
-
-/* ================= HERO BACKGROUND ================= */
-
-.hero{
-  position:relative;
-  min-height:100vh;
-  background:url('assets/1.jpg') center/cover no-repeat;
-  display:flex;
-  align-items:center;
-  justify-content:center;
   color:white;
+  background:url('./assets/1.jpg') center/cover fixed no-repeat;
+  position:relative;
 }
 
-.hero::before{
+body::before{
   content:"";
-  position:absolute;
+  position:fixed;
   inset:0;
-  background:linear-gradient(to bottom, rgba(15,23,42,0.85), rgba(15,23,42,0.95));
+  background:linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.92));
+  z-index:-1;
 }
+
+/* ================= NAV ================= */
 
 nav{
-  position:absolute;
-  top:0;
-  width:100%;
-  padding:25px 10%;
   display:flex;
   justify-content:space-between;
-  z-index:10;
+  align-items:center;
+  padding:25px 10%;
+  position:sticky;
+  top:0;
+  background:rgba(15,23,42,0.6);
+  backdrop-filter:blur(10px);
 }
 
 nav a{
@@ -59,30 +53,31 @@ nav a{
   font-weight:600;
 }
 
-/* ================= HERO CONTENT ================= */
+/* ================= HERO ================= */
 
-.hero-content{
-  position:relative;
-  z-index:5;
+.hero{
+  min-height:100vh;
   display:flex;
   align-items:center;
-  gap:80px;
-  flex-wrap:wrap;
+  justify-content:center;
   padding:0 10%;
 }
 
+.hero-content{
+  display:flex;
+  align-items:center;
+  gap:100px;
+  flex-wrap:wrap;
+}
+
 .hero-left img{
-  width:320px;
-  border-radius:50%;
-  padding:10px;
-  background:rgba(255,255,255,0.08);
-  backdrop-filter:blur(10px);
-  box-shadow:0 30px 90px rgba(0,0,0,0.6);
+  width:360px;
+  box-shadow:0 30px 80px rgba(0,0,0,0.6);
 }
 
 .hero-right h1{
-  font-size:3.2rem;
-  margin:15px 0;
+  font-size:3.5rem;
+  margin:20px 0;
 }
 
 .hero-right h3{
@@ -92,7 +87,7 @@ nav a{
 
 .hero-right p{
   color:#cbd5e1;
-  margin-bottom:20px;
+  margin-bottom:25px;
 }
 
 .btn{
@@ -103,37 +98,31 @@ nav a{
   color:white;
   font-weight:600;
   cursor:pointer;
+  transition:0.3s;
+}
+
+.btn:hover{
+  background:#1e40af;
 }
 
 /* ================= SECTIONS ================= */
 
 section{
-  padding:100px 10%;
-  background:#f8fafc;
-  color:#1e293b;
+  padding:120px 10%;
 }
 
 section h1{
   text-align:center;
-  margin-bottom:50px;
+  margin-bottom:60px;
 }
 
 .card{
-  background:white;
-  padding:35px;
-  border-radius:20px;
-  box-shadow:0 25px 70px rgba(0,0,0,0.08);
-  margin-bottom:35px;
-}
-
-.tag{
-  display:inline-block;
-  background:#e0e7ff;
-  color:#2563eb;
-  padding:6px 14px;
-  border-radius:25px;
-  font-size:0.8rem;
-  margin:8px 6px 0 0;
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(12px);
+  padding:40px;
+  border-radius:16px;
+  margin-bottom:40px;
+  border:1px solid rgba(255,255,255,0.1);
 }
 
 .experience-grid{
@@ -144,9 +133,55 @@ section h1{
 
 .duration{
   font-size:0.85rem;
-  color:#64748b;
-  margin-top:4px;
+  color:#94a3b8;
+  margin-top:5px;
 }
+
+/* ================= CONTACT ================= */
+
+.contact-icons{
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  margin-top:20px;
+}
+
+.contact-icons a{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:#60a5fa;
+  text-decoration:none;
+  font-weight:500;
+  transition:0.3s;
+}
+
+.contact-icons img{
+  width:28px;
+  height:28px;
+  transition:0.3s;
+}
+
+.contact-icons a:hover img{
+  transform:translateY(-5px) scale(1.1);
+}
+
+.contact-icons a:hover{
+  color:#93c5fd;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+  text-align:center;
+  padding:40px 10%;
+  background:rgba(15,23,42,0.6);
+  backdrop-filter:blur(8px);
+  color:#cbd5e1;
+  font-size:0.9rem;
+}
+
+/* ================= RESPONSIVE ================= */
 
 @media(max-width:900px){
   .hero-content{flex-direction:column;text-align:center;}
@@ -157,66 +192,62 @@ section h1{
 </head>
 <body>
 
-<!-- ================= HERO ================= -->
-
-<div class="hero">
+<!-- NAV -->
 
 <nav>
   <div>Pranav</div>
   <div>
-    <a href="#about" data-en="About" data-de="Über">About</a>
-    <a href="#thesis" data-en="Thesis" data-de="Abschlussarbeiten">Thesis</a>
-    <a href="#events" data-en="Events" data-de="Aktuelles">Events</a>
-    <a href="#experience" data-en="Experience" data-de="Erfahrung">Experience</a>
-    <a href="#education" data-en="Education" data-de="Ausbildung">Education</a>
-    <a href="#contact" data-en="Contact" data-de="Kontakt">Contact</a>
+    <a href="#about" data-en="About" data-de="Über">Über</a>
+    <a href="#thesis" data-en="Thesis" data-de="Abschlussarbeiten">Abschlussarbeiten</a>
+    <a href="#events" data-en="Events" data-de="Aktuelles">Aktuelles</a>
+    <a href="#experience" data-en="Experience" data-de="Erfahrung">Erfahrung</a>
+    <a href="#education" data-en="Education" data-de="Ausbildung">Ausbildung</a>
+    <a href="#contact" data-en="Contact" data-de="Kontakt">Kontakt</a>
     <span class="lang-btn" onclick="setLanguage('en')">EN</span> |
     <span class="lang-btn" onclick="setLanguage('de')">DE</span>
   </div>
 </nav>
 
-<div class="hero-content">
-  <div class="hero-left">
-    <img src="assets/prana_nobg.png" alt="Pranav">
-  </div>
-  <div class="hero-right">
-    <h2 data-en="Hello, I'm" data-de="Hallo, ich bin">Hello, I'm</h2>
-    <h1>Pranav B.E., M.Sc.</h1>
-    <h3 data-en="Robotics Programming Developer"
-        data-de="Robotik-Programmierentwickler">
-        Robotics Programming Developer
-    </h3>
-    <p>Q.Vitec GmbH</p>
-    <button class="btn"
-        data-en="Contact Info"
-        data-de="Kontakt"
-        onclick="location.href='#contact'">
-        Contact Info
-    </button>
+<!-- HERO -->
+
+<div class="hero">
+  <div class="hero-content">
+    <div class="hero-left">
+      <img src="assets/prana_nobg.png" alt="Pranav">
+    </div>
+    <div class="hero-right">
+      <h2 data-en="Hello, I'm" data-de="Hallo, ich bin">Hallo, ich bin</h2>
+      <h1>Pranav B.E., M.Sc.</h1>
+      <h3 data-en="Robotics Programming Developer" data-de="Robotik-Programmierentwickler">
+        Robotik-Programmierentwickler
+      </h3>
+      <p>Q.Vitec GmbH</p>
+      <button class="btn" onclick="location.href='#contact'"
+        data-en="Contact Info" data-de="Kontakt">
+        Kontakt
+      </button>
+    </div>
   </div>
 </div>
 
-</div>
-
-<!-- ================= ABOUT ================= -->
+<!-- ABOUT -->
 
 <section id="about">
-<h1 data-en="About Me" data-de="Über mich">About Me</h1>
+<h1 data-en="About Me" data-de="Über mich">Über mich</h1>
 <div class="card">
 <p>
 Experienced project developer with a focus on microcontrollers and single-board computers.
 Proficient in Arduino, ESP32, ESP8266, STM32, Raspberry Pi, Nvidia Jetson.
 Skilled in MatLab, Embedded C, and Python.
-Strong background in program debugging, hardware maintenance, circuit design, and frontend web development.
-Committed to independence, embracing challenges and autonomy to create meaningful outcomes.
+Strong background in debugging, hardware maintenance, circuit design, and frontend web development.
+Committed to independence and creating meaningful outcomes.
 </p>
 </div>
 </section>
-
 <!-- ================= THESIS ================= -->
 
 <section id="thesis">
-<h1 data-en="Thesis" data-de="Abschlussarbeiten">Thesis</h1>
+<h1 data-en="Thesis" data-de="Abschlussarbeiten">Abschlussarbeiten</h1>
 
 <div class="card">
 <h2>Master's Thesis – Leibniz University Hannover (HOT)</h2>
@@ -240,7 +271,7 @@ Committed to independence, embracing challenges and autonomy to create meaningfu
 <!-- ================= EVENTS ================= -->
 
 <section id="events">
-<h1 data-en="Ongoing Events" data-de="Aktuelle Tätigkeit">Ongoing Events</h1>
+<h1 data-en="Ongoing Events" data-de="Aktuelle Tätigkeit">Aktuelle Tätigkeit</h1>
 
 <div class="card">
 <h2>Robotics Programming Developer – Q.Vitec GmbH, Wunstorf, Germany</h2>
@@ -263,7 +294,7 @@ Committed to independence, embracing challenges and autonomy to create meaningfu
 <!-- ================= EXPERIENCE ================= -->
 
 <section id="experience">
-<h1 data-en="Experience" data-de="Berufserfahrung">Experience</h1>
+<h1 data-en="Experience" data-de="Berufserfahrung">Berufserfahrung</h1>
 
 <div class="experience-grid">
 
@@ -290,7 +321,7 @@ Committed to independence, embracing challenges and autonomy to create meaningfu
 <div><strong>Software Engineer Intern</strong>
 <div class="duration">Profihost AG, Hannover (June 2020 – August 2020)</div></div>
 
-<div><strong>R&D Intern (Remote Work)</strong>
+<div><strong>R&amp;D Intern (Remote Work)</strong>
 <div class="duration">Elight SPM, India (April 2020 – July 2020)</div></div>
 
 <div><strong>Research Internship</strong>
@@ -304,10 +335,10 @@ Committed to independence, embracing challenges and autonomy to create meaningfu
 <!-- ================= EDUCATION ================= -->
 
 <section id="education">
-<h1 data-en="Education" data-de="Ausbildung">Education</h1>
+<h1 data-en="Education" data-de="Ausbildung">Ausbildung</h1>
 
 <div class="card">
-<h2>B.E. – Electronics & Communication Engineering</h2>
+<h2>B.E. – Electronics &amp; Communication Engineering</h2>
 <p>Anna University, India</p>
 </div>
 
@@ -317,15 +348,51 @@ Committed to independence, embracing challenges and autonomy to create meaningfu
 </div>
 </section>
 
-<!-- ================= CONTACT ================= -->
+<!-- CONTACT -->
+
+<!-- CONTACT -->
 
 <section id="contact">
-<h1 data-en="Contact Me" data-de="Kontakt">Contact</h1>
+<h1 data-en="Contact Me" data-de="Kontakt">Kontakt</h1>
+
 <div class="card">
-<p>Email: psraajhen@gmail.com</p>
-<p>LinkedIn: linkedin.com/in/psraajhen</p>
+
+  <div class="contact-icons">
+
+    <!-- EMAIL -->
+    <a href="mailto:psraajhen@gmail.com">
+      <img src="./assets/email.png" alt="Email">
+      <span>psraajhen@gmail.com</span>
+    </a>
+
+    <!-- LINKEDIN -->
+    <a href="https://www.linkedin.com/in/psraajhen" target="_blank">
+      <img src="./assets/linkedin.png" alt="LinkedIn">
+      <span>LinkedIn</span>
+    </a>
+
+    <!-- GITHUB -->
+    <a href="https://github.com/psraajhen" target="_blank">
+      <img src="./assets/github.png" alt="GitHub">
+      <span>GitHub</span>
+    </a>
+
+  </div>
+
 </div>
 </section>
+<!-- FOOTER -->
+
+<!-- FOOTER -->
+
+<footer>
+  <p>&copy; 2025 Pranav.
+     <span data-en="All Rights Reserved."
+           data-de="Alle Rechte vorbehalten.">
+           Alle Rechte vorbehalten.
+     </span>
+  </p>
+</footer>
 
 <script>
 function setLanguage(lang){
@@ -335,9 +402,11 @@ function setLanguage(lang){
     el.textContent = el.getAttribute("data-"+lang);
   });
 }
-const savedLang = localStorage.getItem("language") || "en";
+const savedLang = localStorage.getItem("language") || "de";
 setLanguage(savedLang);
 </script>
 
+</body>
+</html>
 </body>
 </html>
