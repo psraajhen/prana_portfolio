@@ -9,58 +9,71 @@
 
 <style>
 
-/* ================= GLOBAL ================= */
+/* ========= GLOBAL ========= */
 
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
 body{
   font-family:'Poppins',sans-serif;
-  background:#f1f5f9;
-  color:#0f172a;
+  background:#f8fafc;
+  color:#1e293b;
 }
 
 section{
-  padding:90px 10%;
+  padding:100px 10%;
 }
 
 h1{
-  font-size:2.6rem;
-  font-weight:700;
   text-align:center;
-  margin-bottom:40px;
+  font-size:2.7rem;
+  margin-bottom:50px;
+  font-weight:700;
 }
 
 h2{
   font-size:1.4rem;
-  margin-bottom:15px;
+  margin-bottom:10px;
 }
 
 p{
-  line-height:1.6;
-  color:#334155;
+  color:#475569;
+  line-height:1.7;
 }
 
-ul{
-  margin-top:10px;
-  padding-left:20px;
+ul{padding-left:20px;margin-top:15px;}
+
+.card{
+  background:white;
+  padding:35px;
+  border-radius:20px;
+  box-shadow:0 20px 60px rgba(0,0,0,0.06);
+  margin-bottom:30px;
+  transition:0.4s ease;
 }
 
-/* ================= NAV ================= */
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 30px 80px rgba(0,0,0,0.08);
+}
+
+.tag{
+  display:inline-block;
+  background:#e0e7ff;
+  color:#2563eb;
+  padding:6px 14px;
+  border-radius:30px;
+  font-size:0.8rem;
+  margin:8px 6px 0 0;
+}
+
+/* ========= NAV ========= */
 
 nav{
   display:flex;
   justify-content:space-between;
   align-items:center;
   padding:20px 10%;
-  background:#0f172a;
+  background:#1e293b;
   position:sticky;
   top:0;
   z-index:1000;
@@ -74,7 +87,7 @@ nav{
 
 .nav-links{
   display:flex;
-  gap:25px;
+  gap:30px;
   align-items:center;
 }
 
@@ -89,39 +102,39 @@ nav{
   color:#2563eb;
 }
 
-.lang-btn{
-  color:#2563eb;
-  font-weight:600;
+.lang-switch{
   cursor:pointer;
+  font-weight:600;
+  color:#2563eb;
 }
 
-/* ================= PROFILE ================= */
+/* ========= PROFILE ========= */
 
 #profile{
   display:flex;
   align-items:center;
   justify-content:center;
-  gap:70px;
+  gap:80px;
   flex-wrap:wrap;
   text-align:center;
 }
 
 .profile-img img{
-  width:260px;
+  width:270px;
   border-radius:50%;
-  box-shadow:0 20px 50px rgba(0,0,0,0.15);
+  box-shadow:0 25px 70px rgba(0,0,0,0.15);
 }
 
 .profile-text h3{
   color:#2563eb;
-  margin:10px 0;
+  margin:12px 0;
 }
 
 .btn{
-  margin-top:20px;
-  padding:12px 28px;
+  margin-top:25px;
+  padding:14px 30px;
   border:none;
-  border-radius:40px;
+  border-radius:50px;
   background:#2563eb;
   color:white;
   font-weight:600;
@@ -131,95 +144,72 @@ nav{
 
 .btn:hover{
   background:#1e40af;
-  transform:translateY(-3px);
+  transform:translateY(-4px);
 }
 
-/* ================= CARD ================= */
+/* ========= TIMELINE EXPERIENCE ========= */
 
-.card{
-  background:white;
-  padding:30px;
-  border-radius:16px;
-  box-shadow:0 10px 35px rgba(0,0,0,0.05);
-  margin-top:25px;
-  transition:0.3s;
+.timeline{
+  position:relative;
+  margin-top:40px;
 }
 
-.card:hover{
-  transform:translateY(-5px);
-}
-
-.tag{
-  display:inline-block;
+.timeline:before{
+  content:'';
+  position:absolute;
+  left:20px;
+  width:4px;
+  height:100%;
   background:#e2e8f0;
-  color:#2563eb;
-  padding:5px 12px;
-  border-radius:20px;
-  font-size:0.8rem;
-  margin:5px 5px 0 0;
 }
 
-/* ================= EXPERIENCE ================= */
-
-.experience-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:40px;
+.timeline-item{
+  margin-left:60px;
+  margin-bottom:40px;
+  position:relative;
 }
 
-.experience-item{
-  margin-bottom:25px;
+.timeline-item:before{
+  content:'';
+  position:absolute;
+  left:-44px;
+  top:5px;
+  width:18px;
+  height:18px;
+  background:#2563eb;
+  border-radius:50%;
 }
 
 .duration{
   font-size:0.85rem;
   color:#64748b;
-  margin-top:4px;
+  margin-top:5px;
 }
 
-/* ================= CONTACT ================= */
+/* ========= CONTACT ========= */
 
-.contact{
-  text-align:center;
-}
-
-.contact a{
-  text-decoration:none;
-  color:#2563eb;
-  font-weight:500;
-}
+.contact{text-align:center;}
+.contact a{color:#2563eb;text-decoration:none;font-weight:500;}
 
 footer{
-  background:#0f172a;
+  background:#1e293b;
   color:white;
   text-align:center;
   padding:30px;
-  margin-top:50px;
-  font-size:0.9rem;
 }
 
-/* ================= RESPONSIVE ================= */
+/* ========= RESPONSIVE ========= */
 
 @media(max-width:900px){
-  .experience-grid{
-    grid-template-columns:1fr;
-  }
-
-  #profile{
-    flex-direction:column;
-  }
-
-  nav{
-    flex-direction:column;
-    gap:10px;
-  }
+  #profile{flex-direction:column;}
+  nav{flex-direction:column;gap:15px;}
 }
 
 </style>
 </head>
 <body>
 
-<!-- ================= NAV ================= -->
+<!-- NAV -->
 
 <nav>
   <div class="logo">Pranav</div>
@@ -228,15 +218,16 @@ footer{
     <a href="#thesis">Thesis</a>
     <a href="#events">Event</a>
     <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
     <a href="#contact">Contact</a>
   </div>
 </nav>
 
-<!-- ================= PROFILE ================= -->
+<!-- PROFILE -->
 
 <section id="profile">
   <div class="profile-img">
-    <img src="assets/prana.jpg" alt="Pranav">
+    <img src="assets/prana_nobg.jpg" alt="Pranav">
   </div>
   <div class="profile-text">
     <h2>Hello, I'm</h2>
@@ -247,42 +238,35 @@ footer{
   </div>
 </section>
 
-<!-- ================= ABOUT ================= -->
+<!-- ABOUT -->
 
 <section id="about">
 <h1>About Me</h1>
 <div class="card">
 <p>
-Experienced project developer with a focus on microcontrollers and single-board computers. 
-Proficient in Arduino, ESP32, ESP8266, STM32, Raspberry Pi, and Nvidia Jetson. 
-Skilled in MatLab, Embedded C, and Python. Strong background in program debugging, 
-computer hardware maintenance, circuit designing (Basic), and web designing (front-end). 
-Committed to independence, I embrace challenges, self-discipline, and the autonomy to create meaningful outcomes.
-</p>
-</div>
-
-<div class="card">
-<h2>Education</h2>
-<p>
-B.E. Bachelors Degree (Electronics & Communication Engineering)  
-at Anna University, India
-</p>
-<p>
-M.Sc. Masters Degree (Optical Technologies)  
-at Leibniz University Hannover, Germany
+Experienced project developer with a focus on microcontrollers and single-board computers.
+Proficient in Arduino, ESP32, ESP8266, STM32, Raspberry Pi, and Nvidia Jetson.
+Skilled in MatLab, Embedded C, and Python.
+Strong background in program debugging, computer hardware maintenance,
+circuit designing (Basic), and web designing (front-end).
+Committed to independence, I embrace challenges, self-discipline,
+and the autonomy to create meaningful outcomes.
 </p>
 </div>
 </section>
 
-<!-- ================= THESIS ================= -->
+<!-- THESIS -->
 
 <section id="thesis">
 <h1>Thesis</h1>
 
 <div class="card">
 <h2>Master's Thesis – Leibniz University Hannover (HOT)</h2>
-<p><strong>Title:</strong> Advancing Melanoma Skin Cancer Diagnostics and Education: Integrating Deep Learning, Generative AI, and Attention Mechanisms for Enhanced Clinical Decision Support.</p>
-<p><strong>Objective:</strong> Develop a generative AI framework to create modified dermoscopic image pairs, illustrating malignancy and benign lesions, to educate patients and dermatologists with user interface.</p>
+<p><strong>Title:</strong> Advancing Melanoma Skin Cancer Diagnostics and Education:
+Integrating Deep Learning, Generative AI, and Attention Mechanisms
+for Enhanced Clinical Decision Support.</p>
+<p><strong>Objective:</strong> Develop a generative AI framework to create modified dermoscopic image pairs,
+illustrating malignancy and benign lesions, to educate patients and dermatologists with user interface.</p>
 <div>
 <span class="tag">Python</span>
 <span class="tag">PyTorch</span>
@@ -291,19 +275,18 @@ at Leibniz University Hannover, Germany
 </div>
 
 <div class="card">
-<h2>Bachelor's Thesis – Anna University, Chennai</h2>
+<h2>Bachelor's Thesis – Anna University, Chennai, India</h2>
 <p><strong>Title:</strong> A Novel Approach for Signal Security and Video Transmission using Lower Bandwidth Technique.</p>
-<p><strong>Objective:</strong> Create a novel secure wireless communication system combining advanced encoding and decoding techniques to improve transmission efficiency while maintaining signal security and privacy.</p>
-<div>
-<span class="tag">MATLAB</span>
-</div>
+<p><strong>Objective:</strong> Create a novel secure wireless communication system combining cutting-edge encoding during transmission and effective decoding during reception to improve data transfer over limited bandwidths while maintaining signal security and privacy.</p>
+<div><span class="tag">MATLAB</span></div>
 </div>
 </section>
 
-<!-- ================= ONGOING EVENTS ================= -->
+<!-- EVENTS -->
 
 <section id="events">
 <h1>Ongoing Events</h1>
+
 <div class="card">
 <h2>Robotics Programming Developer – Q.Vitec GmbH, Wunstorf, Germany</h2>
 
@@ -313,7 +296,7 @@ at Leibniz University Hannover, Germany
 <li>Created Python test frameworks and validation tools to verify code quality, ensure reliable robot performance, and streamline troubleshooting.</li>
 </ul>
 
-<p class="duration">Start Date: April 2024 – Present</p>
+<div class="duration">Start date: April 2024 – Present</div>
 
 <div>
 <span class="tag">Python</span>
@@ -325,62 +308,68 @@ at Leibniz University Hannover, Germany
 </div>
 </section>
 
-<!-- ================= EXPERIENCE ================= -->
+<!-- EXPERIENCE (Timeline Style) -->
 
 <section id="experience">
 <h1>Experience</h1>
 
-<div class="experience-grid">
+<div class="timeline">
 
-<div class="card">
-<h2>Working Experience</h2>
-
-<div class="experience-item">
-<strong>Project Developer (Volunteer)</strong>
+<div class="timeline-item">
+<h2>Project Developer (Volunteer)</h2>
 <div class="duration">MakerLab Hannover (February 2019 – April 2024)</div>
 </div>
 
-<div class="experience-item">
-<strong>Research Assistant</strong>
+<div class="timeline-item">
+<h2>Research Assistant</h2>
 <div class="duration">Leibniz Universität Hannover – Institut für Umformtechnik und Umformmaschinen (February 2024 – March 2024)</div>
 </div>
 
-<div class="experience-item">
-<strong>Student Assistant</strong>
+<div class="timeline-item">
+<h2>Student Assistant</h2>
 <div class="duration">Leibniz Universität Hannover – Institut für Umformtechnik und Umformmaschinen (August 2023 – January 2024)</div>
 </div>
 
-<div class="experience-item">
-<strong>Student Assistant</strong>
+<div class="timeline-item">
+<h2>Student Assistant</h2>
 <div class="duration">Leibniz Universität Hannover – Institut für Quantenoptik (IQO) (January 2021 – June 2021)</div>
 </div>
 
-</div>
-
-<div class="card">
-<h2>Internship Experience</h2>
-
-<div class="experience-item">
-<strong>Software Engineer Intern</strong>
+<div class="timeline-item">
+<h2>Software Engineer Intern</h2>
 <div class="duration">Profihost AG, Hannover (June 2020 – August 2020)</div>
 </div>
 
-<div class="experience-item">
-<strong>R&D Intern (Remote Work)</strong>
+<div class="timeline-item">
+<h2>R&D Intern (Remote work)</h2>
 <div class="duration">Elight SPM, India (April 2020 – July 2020)</div>
 </div>
 
-<div class="experience-item">
-<strong>Research Internship</strong>
+<div class="timeline-item">
+<h2>Research Internship</h2>
 <div class="duration">Hannoversches Zentrum für Optische Technologien, Leibniz Universität Hannover (May 2023 – June 2023)</div>
-</div>
-
 </div>
 
 </div>
 </section>
 
-<!-- ================= CONTACT ================= -->
+<!-- EDUCATION (Moved to Last) -->
+
+<section id="education">
+<h1>Education</h1>
+
+<div class="card">
+<h2>B.E. – Electronics & Communication Engineering</h2>
+<p>Anna University, India</p>
+</div>
+
+<div class="card">
+<h2>M.Sc. – Optical Technologies</h2>
+<p>Leibniz University Hannover, Germany</p>
+</div>
+</section>
+
+<!-- CONTACT -->
 
 <section id="contact" class="contact">
 <h1>Contact Me</h1>
