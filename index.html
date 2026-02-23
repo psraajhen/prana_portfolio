@@ -4,56 +4,126 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pranav Portfolio</title>
-<link rel="icon" type="image/jpeg" href="assets/icon4.png">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
-/* ========= GLOBAL ========= */
+/* ================= GLOBAL ================= */
 
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
+
 body{
   font-family:'Poppins',sans-serif;
+  background:#0f172a;
+}
+
+/* ================= HERO BACKGROUND ================= */
+
+.hero{
+  position:relative;
+  min-height:100vh;
+  background:url('assets/1.jpg') center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to bottom, rgba(15,23,42,0.85), rgba(15,23,42,0.95));
+}
+
+nav{
+  position:absolute;
+  top:0;
+  width:100%;
+  padding:25px 10%;
+  display:flex;
+  justify-content:space-between;
+  z-index:10;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:25px;
+}
+
+.lang-btn{
+  cursor:pointer;
+  color:#60a5fa;
+  font-weight:600;
+}
+
+/* ================= HERO CONTENT ================= */
+
+.hero-content{
+  position:relative;
+  z-index:5;
+  display:flex;
+  align-items:center;
+  gap:80px;
+  flex-wrap:wrap;
+  padding:0 10%;
+}
+
+.hero-left img{
+  width:320px;
+  border-radius:50%;
+  padding:10px;
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(10px);
+  box-shadow:0 30px 90px rgba(0,0,0,0.6);
+}
+
+.hero-right h1{
+  font-size:3.2rem;
+  margin:15px 0;
+}
+
+.hero-right h3{
+  color:#60a5fa;
+  margin-bottom:10px;
+}
+
+.hero-right p{
+  color:#cbd5e1;
+  margin-bottom:20px;
+}
+
+.btn{
+  padding:14px 35px;
+  border:none;
+  border-radius:40px;
+  background:#2563eb;
+  color:white;
+  font-weight:600;
+  cursor:pointer;
+}
+
+/* ================= SECTIONS ================= */
+
+section{
+  padding:100px 10%;
   background:#f8fafc;
   color:#1e293b;
 }
 
-section{
-  padding:100px 10%;
-}
-
-h1{
+section h1{
   text-align:center;
-  font-size:2.7rem;
   margin-bottom:50px;
-  font-weight:700;
 }
-
-h2{
-  font-size:1.4rem;
-  margin-bottom:10px;
-}
-
-p{
-  color:#475569;
-  line-height:1.7;
-}
-
-ul{padding-left:20px;margin-top:15px;}
 
 .card{
   background:white;
   padding:35px;
   border-radius:20px;
-  box-shadow:0 20px 60px rgba(0,0,0,0.06);
-  margin-bottom:30px;
-  transition:0.4s ease;
-}
-
-.card:hover{
-  transform:translateY(-8px);
-  box-shadow:0 30px 80px rgba(0,0,0,0.08);
+  box-shadow:0 25px 70px rgba(0,0,0,0.08);
+  margin-bottom:35px;
 }
 
 .tag{
@@ -61,212 +131,97 @@ ul{padding-left:20px;margin-top:15px;}
   background:#e0e7ff;
   color:#2563eb;
   padding:6px 14px;
-  border-radius:30px;
+  border-radius:25px;
   font-size:0.8rem;
   margin:8px 6px 0 0;
 }
 
-/* ========= NAV ========= */
-
-nav{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:20px 10%;
-  background:#1e293b;
-  position:sticky;
-  top:0;
-  z-index:1000;
-}
-
-.logo{
-  color:white;
-  font-weight:600;
-  font-size:1.4rem;
-}
-
-.nav-links{
-  display:flex;
-  gap:30px;
-  align-items:center;
-}
-
-.nav-links a{
-  color:white;
-  text-decoration:none;
-  font-weight:500;
-  transition:0.3s;
-}
-
-.nav-links a:hover{
-  color:#2563eb;
-}
-
-.lang-switch{
-  cursor:pointer;
-  font-weight:600;
-  color:#2563eb;
-}
-
-/* ========= PROFILE ========= */
-
-#profile{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:80px;
-  flex-wrap:wrap;
-  text-align:center;
-}
-
-.profile-img img{
-  width:270px;
-  border-radius:50%;
-  box-shadow:0 25px 70px rgba(0,0,0,0.15);
-}
-
-.profile-text h3{
-  color:#2563eb;
-  margin:12px 0;
-}
-
-.btn{
-  margin-top:25px;
-  padding:14px 30px;
-  border:none;
-  border-radius:50px;
-  background:#2563eb;
-  color:white;
-  font-weight:600;
-  cursor:pointer;
-  transition:0.3s;
-}
-
-.btn:hover{
-  background:#1e40af;
-  transform:translateY(-4px);
-}
-
-/* ========= TIMELINE EXPERIENCE ========= */
-
-.timeline{
-  position:relative;
-  margin-top:40px;
-}
-
-.timeline:before{
-  content:'';
-  position:absolute;
-  left:20px;
-  width:4px;
-  height:100%;
-  background:#e2e8f0;
-}
-
-.timeline-item{
-  margin-left:60px;
-  margin-bottom:40px;
-  position:relative;
-}
-
-.timeline-item:before{
-  content:'';
-  position:absolute;
-  left:-44px;
-  top:5px;
-  width:18px;
-  height:18px;
-  background:#2563eb;
-  border-radius:50%;
+.experience-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
 }
 
 .duration{
   font-size:0.85rem;
   color:#64748b;
-  margin-top:5px;
+  margin-top:4px;
 }
-
-/* ========= CONTACT ========= */
-
-.contact{text-align:center;}
-.contact a{color:#2563eb;text-decoration:none;font-weight:500;}
-
-footer{
-  background:#1e293b;
-  color:white;
-  text-align:center;
-  padding:30px;
-}
-
-/* ========= RESPONSIVE ========= */
 
 @media(max-width:900px){
-  #profile{flex-direction:column;}
-  nav{flex-direction:column;gap:15px;}
+  .hero-content{flex-direction:column;text-align:center;}
+  .experience-grid{grid-template-columns:1fr;}
 }
 
 </style>
 </head>
 <body>
 
-<!-- NAV -->
+<!-- ================= HERO ================= -->
+
+<div class="hero">
 
 <nav>
-  <div class="logo">Pranav</div>
-  <div class="nav-links">
-    <a href="#about">About</a>
-    <a href="#thesis">Thesis</a>
-    <a href="#events">Event</a>
-    <a href="#experience">Experience</a>
-    <a href="#education">Education</a>
-    <a href="#contact">Contact</a>
+  <div>Pranav</div>
+  <div>
+    <a href="#about" data-en="About" data-de="Über">About</a>
+    <a href="#thesis" data-en="Thesis" data-de="Abschlussarbeiten">Thesis</a>
+    <a href="#events" data-en="Events" data-de="Aktuelles">Events</a>
+    <a href="#experience" data-en="Experience" data-de="Erfahrung">Experience</a>
+    <a href="#education" data-en="Education" data-de="Ausbildung">Education</a>
+    <a href="#contact" data-en="Contact" data-de="Kontakt">Contact</a>
+    <span class="lang-btn" onclick="setLanguage('en')">EN</span> |
+    <span class="lang-btn" onclick="setLanguage('de')">DE</span>
   </div>
 </nav>
 
-<!-- PROFILE -->
-
-<section id="profile">
-  <div class="profile-img">
-    <img src="assets/prana_nobg.jpg" alt="Pranav">
+<div class="hero-content">
+  <div class="hero-left">
+    <img src="assets/prana_nobg.png" alt="Pranav">
   </div>
-  <div class="profile-text">
-    <h2>Hello, I'm</h2>
+  <div class="hero-right">
+    <h2 data-en="Hello, I'm" data-de="Hallo, ich bin">Hello, I'm</h2>
     <h1>Pranav B.E., M.Sc.</h1>
-    <h3>Robotics Programming Developer</h3>
+    <h3 data-en="Robotics Programming Developer"
+        data-de="Robotik-Programmierentwickler">
+        Robotics Programming Developer
+    </h3>
     <p>Q.Vitec GmbH</p>
-    <button class="btn" onclick="location.href='#contact'">Contact Info</button>
+    <button class="btn"
+        data-en="Contact Info"
+        data-de="Kontakt"
+        onclick="location.href='#contact'">
+        Contact Info
+    </button>
   </div>
-</section>
+</div>
 
-<!-- ABOUT -->
+</div>
+
+<!-- ================= ABOUT ================= -->
 
 <section id="about">
-<h1>About Me</h1>
+<h1 data-en="About Me" data-de="Über mich">About Me</h1>
 <div class="card">
 <p>
 Experienced project developer with a focus on microcontrollers and single-board computers.
-Proficient in Arduino, ESP32, ESP8266, STM32, Raspberry Pi, and Nvidia Jetson.
+Proficient in Arduino, ESP32, ESP8266, STM32, Raspberry Pi, Nvidia Jetson.
 Skilled in MatLab, Embedded C, and Python.
-Strong background in program debugging, computer hardware maintenance,
-circuit designing (Basic), and web designing (front-end).
-Committed to independence, I embrace challenges, self-discipline,
-and the autonomy to create meaningful outcomes.
+Strong background in program debugging, hardware maintenance, circuit design, and frontend web development.
+Committed to independence, embracing challenges and autonomy to create meaningful outcomes.
 </p>
 </div>
 </section>
 
-<!-- THESIS -->
+<!-- ================= THESIS ================= -->
 
 <section id="thesis">
-<h1>Thesis</h1>
+<h1 data-en="Thesis" data-de="Abschlussarbeiten">Thesis</h1>
 
 <div class="card">
 <h2>Master's Thesis – Leibniz University Hannover (HOT)</h2>
-<p><strong>Title:</strong> Advancing Melanoma Skin Cancer Diagnostics and Education:
-Integrating Deep Learning, Generative AI, and Attention Mechanisms
-for Enhanced Clinical Decision Support.</p>
-<p><strong>Objective:</strong> Develop a generative AI framework to create modified dermoscopic image pairs,
-illustrating malignancy and benign lesions, to educate patients and dermatologists with user interface.</p>
+<p><strong>Title:</strong> Advancing Melanoma Skin Cancer Diagnostics and Education: Integrating Deep Learning, Generative AI, and Attention Mechanisms for Enhanced Clinical Decision Support.</p>
+<p><strong>Objective:</strong> Develop a generative AI framework to create modified dermoscopic image pairs illustrating malignancy and benign lesions to educate patients and dermatologists.</p>
 <div>
 <span class="tag">Python</span>
 <span class="tag">PyTorch</span>
@@ -277,27 +232,24 @@ illustrating malignancy and benign lesions, to educate patients and dermatologis
 <div class="card">
 <h2>Bachelor's Thesis – Anna University, Chennai, India</h2>
 <p><strong>Title:</strong> A Novel Approach for Signal Security and Video Transmission using Lower Bandwidth Technique.</p>
-<p><strong>Objective:</strong> Create a novel secure wireless communication system combining cutting-edge encoding during transmission and effective decoding during reception to improve data transfer over limited bandwidths while maintaining signal security and privacy.</p>
+<p><strong>Objective:</strong> Create a secure wireless communication system combining advanced encoding and decoding for efficient low-bandwidth transmission while maintaining privacy.</p>
 <div><span class="tag">MATLAB</span></div>
 </div>
 </section>
 
-<!-- EVENTS -->
+<!-- ================= EVENTS ================= -->
 
 <section id="events">
-<h1>Ongoing Events</h1>
+<h1 data-en="Ongoing Events" data-de="Aktuelle Tätigkeit">Ongoing Events</h1>
 
 <div class="card">
 <h2>Robotics Programming Developer – Q.Vitec GmbH, Wunstorf, Germany</h2>
-
 <ul>
 <li>Designed and developed Python-based control software and algorithms for robotic perception, path planning, and motion control.</li>
-<li>Integrated robotic hardware components—including sensors, actuators, and PLCs—with custom software to enable automated workflows.</li>
-<li>Created Python test frameworks and validation tools to verify code quality, ensure reliable robot performance, and streamline troubleshooting.</li>
+<li>Integrated sensors, actuators, and PLC systems with custom software to enable automated workflows.</li>
+<li>Created Python test frameworks and validation tools to ensure reliable robot performance.</li>
 </ul>
-
 <div class="duration">Start date: April 2024 – Present</div>
-
 <div>
 <span class="tag">Python</span>
 <span class="tag">LUA</span>
@@ -308,55 +260,51 @@ illustrating malignancy and benign lesions, to educate patients and dermatologis
 </div>
 </section>
 
-<!-- EXPERIENCE (Timeline Style) -->
+<!-- ================= EXPERIENCE ================= -->
 
 <section id="experience">
-<h1>Experience</h1>
+<h1 data-en="Experience" data-de="Berufserfahrung">Experience</h1>
 
-<div class="timeline">
+<div class="experience-grid">
 
-<div class="timeline-item">
-<h2>Project Developer (Volunteer)</h2>
-<div class="duration">MakerLab Hannover (February 2019 – April 2024)</div>
+<div class="card">
+<h2>Working Experience</h2>
+
+<div><strong>Project Developer (Volunteer)</strong>
+<div class="duration">MakerLab Hannover (February 2019 – April 2024)</div></div>
+
+<div><strong>Research Assistant</strong>
+<div class="duration">Leibniz Universität Hannover – Institut für Umformtechnik und Umformmaschinen (February 2024 – March 2024)</div></div>
+
+<div><strong>Student Assistant</strong>
+<div class="duration">Leibniz Universität Hannover – Institut für Umformtechnik und Umformmaschinen (August 2023 – January 2024)</div></div>
+
+<div><strong>Student Assistant</strong>
+<div class="duration">Leibniz Universität Hannover – Institut für Quantenoptik (IQO) (January 2021 – June 2021)</div></div>
+
 </div>
 
-<div class="timeline-item">
-<h2>Research Assistant</h2>
-<div class="duration">Leibniz Universität Hannover – Institut für Umformtechnik und Umformmaschinen (February 2024 – March 2024)</div>
-</div>
+<div class="card">
+<h2>Internship Experience</h2>
 
-<div class="timeline-item">
-<h2>Student Assistant</h2>
-<div class="duration">Leibniz Universität Hannover – Institut für Umformtechnik und Umformmaschinen (August 2023 – January 2024)</div>
-</div>
+<div><strong>Software Engineer Intern</strong>
+<div class="duration">Profihost AG, Hannover (June 2020 – August 2020)</div></div>
 
-<div class="timeline-item">
-<h2>Student Assistant</h2>
-<div class="duration">Leibniz Universität Hannover – Institut für Quantenoptik (IQO) (January 2021 – June 2021)</div>
-</div>
+<div><strong>R&D Intern (Remote Work)</strong>
+<div class="duration">Elight SPM, India (April 2020 – July 2020)</div></div>
 
-<div class="timeline-item">
-<h2>Software Engineer Intern</h2>
-<div class="duration">Profihost AG, Hannover (June 2020 – August 2020)</div>
-</div>
+<div><strong>Research Internship</strong>
+<div class="duration">Hannoversches Zentrum für Optische Technologien, Leibniz Universität Hannover (May 2023 – June 2023)</div></div>
 
-<div class="timeline-item">
-<h2>R&D Intern (Remote work)</h2>
-<div class="duration">Elight SPM, India (April 2020 – July 2020)</div>
-</div>
-
-<div class="timeline-item">
-<h2>Research Internship</h2>
-<div class="duration">Hannoversches Zentrum für Optische Technologien, Leibniz Universität Hannover (May 2023 – June 2023)</div>
 </div>
 
 </div>
 </section>
 
-<!-- EDUCATION (Moved to Last) -->
+<!-- ================= EDUCATION ================= -->
 
 <section id="education">
-<h1>Education</h1>
+<h1 data-en="Education" data-de="Ausbildung">Education</h1>
 
 <div class="card">
 <h2>B.E. – Electronics & Communication Engineering</h2>
@@ -369,17 +317,27 @@ illustrating malignancy and benign lesions, to educate patients and dermatologis
 </div>
 </section>
 
-<!-- CONTACT -->
+<!-- ================= CONTACT ================= -->
 
-<section id="contact" class="contact">
-<h1>Contact Me</h1>
-<p>Email: <a href="mailto:psraajhen@gmail.com">psraajhen@gmail.com</a></p>
-<p><a href="https://www.linkedin.com/in/psraajhen" target="_blank">LinkedIn</a></p>
+<section id="contact">
+<h1 data-en="Contact Me" data-de="Kontakt">Contact</h1>
+<div class="card">
+<p>Email: psraajhen@gmail.com</p>
+<p>LinkedIn: linkedin.com/in/psraajhen</p>
+</div>
 </section>
 
-<footer>
-© 2025 Pranav. All Rights Reserved.
-</footer>
+<script>
+function setLanguage(lang){
+  document.documentElement.lang = lang;
+  localStorage.setItem("language", lang);
+  document.querySelectorAll("[data-en]").forEach(el=>{
+    el.textContent = el.getAttribute("data-"+lang);
+  });
+}
+const savedLang = localStorage.getItem("language") || "en";
+setLanguage(savedLang);
+</script>
 
 </body>
 </html>
