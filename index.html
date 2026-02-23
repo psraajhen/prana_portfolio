@@ -4,200 +4,214 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pranav Portfolio</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/jpeg" href="assets/icon4.png">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
-/* ================= GENERAL ================= */
+/* ================= GLOBAL ================= */
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-html {
-  scroll-behavior: smooth;
+html{
+  scroll-behavior:smooth;
 }
 
-body {
-  font-family: "Poppins", sans-serif;
-  background: #f8f9fa;
-  color: #333;
+body{
+  font-family:'Poppins',sans-serif;
+  background:#f1f5f9;
+  color:#0f172a;
 }
 
-section {
-  padding: 80px 10%;
+section{
+  padding:90px 10%;
 }
 
-h1 {
-  font-size: 2.5rem;
-  margin-bottom: 30px;
-  text-align: center;
+h1{
+  font-size:2.6rem;
+  font-weight:700;
+  text-align:center;
+  margin-bottom:40px;
 }
 
-h2 {
-  margin-bottom: 20px;
+h2{
+  font-size:1.4rem;
+  margin-bottom:15px;
 }
 
-p {
-  color: #555;
-  line-height: 1.6;
+p{
+  line-height:1.6;
+  color:#334155;
+}
+
+ul{
+  margin-top:10px;
+  padding-left:20px;
 }
 
 /* ================= NAV ================= */
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 10%;
-  background: white;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 10%;
+  background:#0f172a;
+  position:sticky;
+  top:0;
+  z-index:1000;
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: 600;
+.logo{
+  color:white;
+  font-weight:600;
+  font-size:1.4rem;
 }
 
-.nav-links {
-  display: flex;
-  gap: 25px;
-  align-items: center;
+.nav-links{
+  display:flex;
+  gap:25px;
+  align-items:center;
 }
 
-.nav-links a {
-  text-decoration: none;
-  color: black;
-  font-weight: 500;
-  transition: 0.3s;
+.nav-links a{
+  color:white;
+  text-decoration:none;
+  font-weight:500;
+  transition:0.3s;
 }
 
-.nav-links a:hover {
-  color: #007bff;
+.nav-links a:hover{
+  color:#2563eb;
 }
 
-.lang-btn {
-  cursor: pointer;
-  font-weight: 600;
+.lang-btn{
+  color:#2563eb;
+  font-weight:600;
+  cursor:pointer;
 }
 
 /* ================= PROFILE ================= */
 
-#profile {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 60px;
-  flex-wrap: wrap;
-  text-align: center;
+#profile{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:70px;
+  flex-wrap:wrap;
+  text-align:center;
 }
 
-.profile-img img {
-  width: 260px;
-  border-radius: 50%;
-  box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+.profile-img img{
+  width:260px;
+  border-radius:50%;
+  box-shadow:0 20px 50px rgba(0,0,0,0.15);
 }
 
-.profile-text h3 {
-  color: #007bff;
-  margin: 10px 0;
+.profile-text h3{
+  color:#2563eb;
+  margin:10px 0;
 }
 
-.btn {
-  margin-top: 20px;
-  padding: 12px 25px;
-  border-radius: 30px;
-  border: none;
-  background: linear-gradient(135deg,#007bff,#0056b3);
-  color: white;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.3s;
+.btn{
+  margin-top:20px;
+  padding:12px 28px;
+  border:none;
+  border-radius:40px;
+  background:#2563eb;
+  color:white;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.3s;
 }
 
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+.btn:hover{
+  background:#1e40af;
+  transform:translateY(-3px);
 }
 
-/* ================= CARDS ================= */
+/* ================= CARD ================= */
 
-.card {
-  background: white;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 5px 25px rgba(0,0,0,0.05);
-  margin-top: 30px;
-  transition: 0.3s;
+.card{
+  background:white;
+  padding:30px;
+  border-radius:16px;
+  box-shadow:0 10px 35px rgba(0,0,0,0.05);
+  margin-top:25px;
+  transition:0.3s;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+.card:hover{
+  transform:translateY(-5px);
 }
 
-.tag {
-  display: inline-block;
-  background: #eef4ff;
-  color: #007bff;
-  padding: 5px 12px;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  margin: 5px 5px 0 0;
+.tag{
+  display:inline-block;
+  background:#e2e8f0;
+  color:#2563eb;
+  padding:5px 12px;
+  border-radius:20px;
+  font-size:0.8rem;
+  margin:5px 5px 0 0;
 }
 
 /* ================= EXPERIENCE ================= */
 
-.experience-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
+.experience-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
 }
 
-.experience-item {
-  margin-bottom: 20px;
+.experience-item{
+  margin-bottom:25px;
+}
+
+.duration{
+  font-size:0.85rem;
+  color:#64748b;
+  margin-top:4px;
 }
 
 /* ================= CONTACT ================= */
 
-.contact {
-  text-align: center;
+.contact{
+  text-align:center;
 }
 
-.contact a {
-  text-decoration: none;
-  color: #007bff;
-  font-weight: 500;
+.contact a{
+  text-decoration:none;
+  color:#2563eb;
+  font-weight:500;
 }
 
-footer {
-  text-align: center;
-  padding: 30px;
-  background: white;
-  margin-top: 50px;
-  font-size: 0.9rem;
+footer{
+  background:#0f172a;
+  color:white;
+  text-align:center;
+  padding:30px;
+  margin-top:50px;
+  font-size:0.9rem;
 }
 
 /* ================= RESPONSIVE ================= */
 
-@media(max-width: 900px) {
-  .experience-grid {
-    grid-template-columns: 1fr;
+@media(max-width:900px){
+  .experience-grid{
+    grid-template-columns:1fr;
   }
 
-  #profile {
-    flex-direction: column;
+  #profile{
+    flex-direction:column;
   }
 
-  nav {
-    flex-direction: column;
-    gap: 10px;
+  nav{
+    flex-direction:column;
+    gap:10px;
   }
 }
 
@@ -205,18 +219,16 @@ footer {
 </head>
 <body>
 
-<!-- ================= NAVIGATION ================= -->
+<!-- ================= NAV ================= -->
 
 <nav>
   <div class="logo">Pranav</div>
   <div class="nav-links">
-    <a href="#about" data-en="About" data-de="Über">About</a>
-    <a href="#thesis" data-en="Thesis" data-de="Abschlussarbeit">Thesis</a>
-    <a href="#events" data-en="Events" data-de="Aktuelles">Events</a>
-    <a href="#experience" data-en="Experience" data-de="Erfahrung">Experience</a>
-    <a href="#contact" data-en="Contact" data-de="Kontakt">Contact</a>
-    <span class="lang-btn" onclick="setLanguage('en')">EN</span> |
-    <span class="lang-btn" onclick="setLanguage('de')">DE</span>
+    <a href="#about">About</a>
+    <a href="#thesis">Thesis</a>
+    <a href="#events">Event</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
   </div>
 </nav>
 
@@ -227,157 +239,158 @@ footer {
     <img src="assets/prana.jpg" alt="Pranav">
   </div>
   <div class="profile-text">
-    <h2 data-en="Hello, I'm" data-de="Hallo, ich bin">Hello, I'm</h2>
+    <h2>Hello, I'm</h2>
     <h1>Pranav B.E., M.Sc.</h1>
-    <h3 data-en="Robotics Programming Developer"
-        data-de="Robotik-Programmierentwickler">
-        Robotics Programming Developer
-    </h3>
-    <p data-en="Q.Vitec GmbH"
-       data-de="Q.Vitec GmbH">
-       Q.Vitec GmbH
-    </p>
-    <button class="btn"
-        data-en="Contact Info"
-        data-de="Kontakt"
-        onclick="location.href='#contact'">
-        Contact Info
-    </button>
+    <h3>Robotics Programming Developer</h3>
+    <p>Q.Vitec GmbH</p>
+    <button class="btn" onclick="location.href='#contact'">Contact Info</button>
   </div>
 </section>
 
 <!-- ================= ABOUT ================= -->
 
 <section id="about">
-  <h1 data-en="About Me" data-de="Über mich">About Me</h1>
-  <div class="card">
-    <p data-en="Experienced project developer with a focus on microcontrollers and single-board computers. Skilled in Arduino, ESP32, STM32, Raspberry Pi, Nvidia Jetson, MATLAB, Embedded C and Python. Strong background in debugging, hardware maintenance, circuit design and frontend web development."
-       data-de="Erfahrener Projektentwickler mit Schwerpunkt auf Mikrocontrollern und Single-Board-Computern. Erfahrung mit Arduino, ESP32, STM32, Raspberry Pi, Nvidia Jetson, MATLAB, Embedded C und Python. Starker Hintergrund in Debugging, Hardwarewartung, Schaltungsdesign und Frontend-Webentwicklung.">
-       Experienced project developer with a focus on microcontrollers and single-board computers...
-    </p>
-  </div>
+<h1>About Me</h1>
+<div class="card">
+<p>
+Experienced project developer with a focus on microcontrollers and single-board computers. 
+Proficient in Arduino, ESP32, ESP8266, STM32, Raspberry Pi, and Nvidia Jetson. 
+Skilled in MatLab, Embedded C, and Python. Strong background in program debugging, 
+computer hardware maintenance, circuit designing (Basic), and web designing (front-end). 
+Committed to independence, I embrace challenges, self-discipline, and the autonomy to create meaningful outcomes.
+</p>
+</div>
+
+<div class="card">
+<h2>Education</h2>
+<p>
+B.E. Bachelors Degree (Electronics & Communication Engineering)  
+at Anna University, India
+</p>
+<p>
+M.Sc. Masters Degree (Optical Technologies)  
+at Leibniz University Hannover, Germany
+</p>
+</div>
 </section>
 
 <!-- ================= THESIS ================= -->
 
 <section id="thesis">
-  <h1 data-en="Thesis" data-de="Abschlussarbeiten">Thesis</h1>
+<h1>Thesis</h1>
 
-  <div class="card">
-    <h2 data-en="Master's Thesis"
-        data-de="Masterarbeit">
-        Master's Thesis
-    </h2>
-    <p data-en="Advancing Melanoma Skin Cancer Diagnostics using Deep Learning and Generative AI."
-       data-de="Weiterentwicklung der Melanom-Diagnostik mit Deep Learning und Generativer KI.">
-    </p>
-    <div>
-      <span class="tag">Python</span>
-      <span class="tag">PyTorch</span>
-      <span class="tag">Deep Learning</span>
-    </div>
-  </div>
+<div class="card">
+<h2>Master's Thesis – Leibniz University Hannover (HOT)</h2>
+<p><strong>Title:</strong> Advancing Melanoma Skin Cancer Diagnostics and Education: Integrating Deep Learning, Generative AI, and Attention Mechanisms for Enhanced Clinical Decision Support.</p>
+<p><strong>Objective:</strong> Develop a generative AI framework to create modified dermoscopic image pairs, illustrating malignancy and benign lesions, to educate patients and dermatologists with user interface.</p>
+<div>
+<span class="tag">Python</span>
+<span class="tag">PyTorch</span>
+<span class="tag">Deep Learning</span>
+</div>
+</div>
 
-  <div class="card">
-    <h2 data-en="Bachelor's Thesis"
-        data-de="Bachelorarbeit">
-        Bachelor's Thesis
-    </h2>
-    <p data-en="Secure wireless communication system for video transmission using lower bandwidth techniques."
-       data-de="Sicheres drahtloses Kommunikationssystem für Videoübertragung mit geringer Bandbreite.">
-    </p>
-    <div>
-      <span class="tag">MATLAB</span>
-    </div>
-  </div>
+<div class="card">
+<h2>Bachelor's Thesis – Anna University, Chennai</h2>
+<p><strong>Title:</strong> A Novel Approach for Signal Security and Video Transmission using Lower Bandwidth Technique.</p>
+<p><strong>Objective:</strong> Create a novel secure wireless communication system combining advanced encoding and decoding techniques to improve transmission efficiency while maintaining signal security and privacy.</p>
+<div>
+<span class="tag">MATLAB</span>
+</div>
+</div>
 </section>
 
-<!-- ================= EVENTS ================= -->
+<!-- ================= ONGOING EVENTS ================= -->
 
 <section id="events">
-  <h1 data-en="Ongoing Events"
-      data-de="Aktuelle Tätigkeit">
-      Ongoing Events
-  </h1>
+<h1>Ongoing Events</h1>
+<div class="card">
+<h2>Robotics Programming Developer – Q.Vitec GmbH, Wunstorf, Germany</h2>
 
-  <div class="card">
-    <h2>Q.Vitec GmbH</h2>
-    <p data-en="Robotics Programming Developer (April 2024 – Present)"
-       data-de="Robotik-Programmierentwickler (April 2024 – Heute)">
-    </p>
-  </div>
+<ul>
+<li>Designed and developed Python-based control software and algorithms for robotic perception, path planning, and motion control.</li>
+<li>Integrated robotic hardware components—including sensors, actuators, and PLCs—with custom software to enable automated workflows.</li>
+<li>Created Python test frameworks and validation tools to verify code quality, ensure reliable robot performance, and streamline troubleshooting.</li>
+</ul>
+
+<p class="duration">Start Date: April 2024 – Present</p>
+
+<div>
+<span class="tag">Python</span>
+<span class="tag">LUA</span>
+<span class="tag">Modbus/TCP</span>
+<span class="tag">PLC Interfaces</span>
+<span class="tag">Git</span>
+</div>
+</div>
 </section>
 
 <!-- ================= EXPERIENCE ================= -->
 
 <section id="experience">
-  <h1 data-en="Experience" data-de="Berufserfahrung">Experience</h1>
+<h1>Experience</h1>
 
-  <div class="experience-grid">
+<div class="experience-grid">
 
-    <div class="card">
-      <h2 data-en="Working Experience"
-          data-de="Berufliche Tätigkeiten">
-      </h2>
+<div class="card">
+<h2>Working Experience</h2>
 
-      <div class="experience-item">
-        <strong>Project Developer (Volunteer)</strong><br>
-        MakerLab Hannover (2019 – 2024)
-      </div>
+<div class="experience-item">
+<strong>Project Developer (Volunteer)</strong>
+<div class="duration">MakerLab Hannover (February 2019 – April 2024)</div>
+</div>
 
-      <div class="experience-item">
-        <strong>Research Assistant</strong><br>
-        Leibniz Universität Hannover
-      </div>
-    </div>
+<div class="experience-item">
+<strong>Research Assistant</strong>
+<div class="duration">Leibniz Universität Hannover – Institut für Umformtechnik und Umformmaschinen (February 2024 – March 2024)</div>
+</div>
 
-    <div class="card">
-      <h2 data-en="Internship Experience"
-          data-de="Praktika">
-      </h2>
+<div class="experience-item">
+<strong>Student Assistant</strong>
+<div class="duration">Leibniz Universität Hannover – Institut für Umformtechnik und Umformmaschinen (August 2023 – January 2024)</div>
+</div>
 
-      <div class="experience-item">
-        <strong>Software Engineer Intern</strong><br>
-        Profihost AG
-      </div>
+<div class="experience-item">
+<strong>Student Assistant</strong>
+<div class="duration">Leibniz Universität Hannover – Institut für Quantenoptik (IQO) (January 2021 – June 2021)</div>
+</div>
 
-      <div class="experience-item">
-        <strong>R&D Intern</strong><br>
-        Elight SPM
-      </div>
+</div>
 
-    </div>
+<div class="card">
+<h2>Internship Experience</h2>
 
-  </div>
+<div class="experience-item">
+<strong>Software Engineer Intern</strong>
+<div class="duration">Profihost AG, Hannover (June 2020 – August 2020)</div>
+</div>
+
+<div class="experience-item">
+<strong>R&D Intern (Remote Work)</strong>
+<div class="duration">Elight SPM, India (April 2020 – July 2020)</div>
+</div>
+
+<div class="experience-item">
+<strong>Research Internship</strong>
+<div class="duration">Hannoversches Zentrum für Optische Technologien, Leibniz Universität Hannover (May 2023 – June 2023)</div>
+</div>
+
+</div>
+
+</div>
 </section>
 
 <!-- ================= CONTACT ================= -->
 
 <section id="contact" class="contact">
-  <h1 data-en="Contact Me" data-de="Kontakt">Contact Me</h1>
-  <p>Email: <a href="mailto:psraajhen@gmail.com">psraajhen@gmail.com</a></p>
-  <p><a href="https://linkedin.com/in/psraajhen" target="_blank">LinkedIn</a></p>
+<h1>Contact Me</h1>
+<p>Email: <a href="mailto:psraajhen@gmail.com">psraajhen@gmail.com</a></p>
+<p><a href="https://www.linkedin.com/in/psraajhen" target="_blank">LinkedIn</a></p>
 </section>
 
 <footer>
-  © 2026 Pranav. All Rights Reserved.
+© 2025 Pranav. All Rights Reserved.
 </footer>
-
-<!-- ================= LANGUAGE SCRIPT ================= -->
-
-<script>
-function setLanguage(lang) {
-  document.documentElement.lang = lang;
-  localStorage.setItem("language", lang);
-
-  document.querySelectorAll("[data-en]").forEach(el => {
-    el.textContent = el.getAttribute("data-" + lang);
-  });
-}
-
-const savedLang = localStorage.getItem("language") || "en";
-setLanguage(savedLang);
-</script>
 
 </body>
 </html>
